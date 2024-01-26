@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <!--
+        AUTHOR NAME: Tsung Yilee
+        AUTHOR EMAIL: Iliki@yandex.com
+    --> 
+    <link rel="stylesheet" href="../style/home.css">
+</head>
+<body>
+    <div class="main">
+        <div class="article-region">
+            <img src="../resource/red_dragon_left.png" class="left-logo" alt="标志">
+            <div class="logo-words">
+                从
+                <span class="underline-words">拼音、笔画</span>
+                接触汉字——再从
+                <span class="underline-words">词语、成语</span>
+                掌握汉字
+            </div>
+            <img src="../resource/red_dragon_right.png" class="right-logo" alt="标志">
+        </div>
+        <div class="search-region">
+            <!--该区域涵盖搜索-->
+            <img src="../resource/search_input_left.png" class="left-search-decoration" alt="标志">
+            <input type="text" class="search-bar" id="searchBar" placeholder="输入单个汉字以开始检索">
+            <button type="button" class="search-button" onclick="searchInfo()">搜索</button>
+            <img src="../resource/search_input_right.png" class="right-search-decoration" alt="标志">
+        </div>
+        <div class="card-region">
+            <div class="search-card"></div>
+            <div class="wordbook-card"></div>
+            <div class="common-questions-card"></div>
+            <div class="specific-questions-card"></div>
+        </div>
+    </div>
+</body>
+</html>

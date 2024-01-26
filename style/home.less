@@ -1,0 +1,116 @@
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        //设置背景图片
+        background-image: url("../resource/home_background.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        //多余的裁剪掉
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        .article-region {
+            flex: 0.3;
+            height: 30vh;
+            //左右logo水平、垂直居中
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            .left-logo, .right-logo {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 60%;
+                width: auto;
+            }
+            .logo-words {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+                font-family: '楷体';
+                white-space: nowrap;
+                width: 65rem;
+                height: 50%;
+                //设置背景图片
+                background-image: url("../resource/inc_canvas_rescale.png");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat; 
+                filter: opacity(70%);
+            }
+        }
+        .search-region {
+            flex: 0.1;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .left-search-decoration, .right-search-decoration {
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                height: 100%;
+                width: auto;
+            }
+            .search-bar {
+                width: 35rem; /* 输入框宽度 */
+                padding: 0.5rem; /* 输入框内边距 */
+                margin-right: 0;
+                border-radius: 0.5rem 0px 0px 0.5rem;
+                border: none;
+                color: darkgray;
+                font-size: 2.15rem;
+                font-family: '仿宋';
+                box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            }
+            .search-bar:focus{
+                outline: rgb(233,224,210) solid 0.1rem;
+            }
+            .search-button {
+                width: 7rem;
+                margin-left: 0;
+                padding: 0.5rem; /* 按钮内边距 */
+                cursor: pointer; /* 鼠标悬停样式 */
+                border: none;
+                background-color: rgb(128,123,117);
+                border-radius: 0px 0.5rem 0.5rem 0px;
+                color: #fff;
+                font-size: 2.15rem;
+                font-family: '仿宋';
+                box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            }
+            .search-button:hover{
+                background-color: rgb(233,224,210);
+                color: black;
+            }
+        }
+        .card-region {
+            flex: 0.6;
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div {
+                width: 15rem;
+                height: 70%;
+                background-color: rbga(224,224,224,0.9);
+                filter: opacity(95%);
+                border-radius: 1rem;
+                border: none;
+                margin: 2rem;
+                font-size: 1.25rem;
+                font-family: '仿宋';
+                box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            }
+            div:hover {
+                cursor: pointer;
+                box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); /* 悬停时增加更明显的阴影 */
+            }
+        }
+    }
+
