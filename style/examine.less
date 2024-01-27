@@ -1,7 +1,7 @@
 body, html {
     margin: 0;
     padding: 0;
-    height: 110vh;
+    height: 100vh;
     //设置背景图片
     background-image: url("../resource/examine_background.png");
     background-size: cover;
@@ -47,7 +47,7 @@ body, html {
         }
     }
     .function-region {
-        height: 20vh;
+        height: 10vh;
         overflow: hidden;
         display: flex;
         align-items: center;
@@ -57,13 +57,13 @@ body, html {
             background-position: center;
             background-repeat: no-repeat;
             height: 90%;
-            width: 20vh;
+            width: 12vh;
         }
         span {
-            font-size: 2rem;
+            font-size: 1.5rem;
             font-family: '仿宋';
-            color: rgb(100, 100, 100);
-            cursor: pointer;
+            color: black;
+            cursor: help;
         }
         button {
             background-image: url("../resource/character_button.png");
@@ -76,7 +76,7 @@ body, html {
             background-color: rgb(128,123,117);
             box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
             color: rgb(45, 45, 45);
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: bold;
             font-family: '仿宋';
             outline: rgb(233,224,210) solid 0.1rem;
@@ -89,8 +89,8 @@ body, html {
             display: flex;
             flex-direction: column; 
             .gradewordbook-container {
-                height: 10vh;
-                width: 60vh;
+                height: 5vh;
+                width: 50vh;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
@@ -99,6 +99,10 @@ body, html {
                     width: 7rem;
                     margin-left: 0rem;
                     margin-right: 0rem;
+                }
+                .underline-decoration {
+                    color: red;
+                    text-decoration: underline;
                 }
                 .option{
                     box-shadow: 0 0 0.05rem #ccc;
@@ -109,14 +113,14 @@ body, html {
                         background-image: url("../resource/character_button.png");
                         border: none;
                         outline: none;
-                        height: 2.5rem;
-                        line-height: 2.5rem;
+                        height: 1.75rem;
+                        line-height: 1.75rem;
                         width: 4rem;
                         -moz-appearance: none;
                         -webkit-appearance: none;
                         appearance: none;
                         font-family: '仿宋';
-                        font-size: 1.5rem;
+                        font-size: 1.15rem;
                         font-weight: bold;
                         color: rgb(45, 45, 45);
                         text-align: center; 
@@ -130,17 +134,18 @@ body, html {
                 }
             }
             .wordbook-container {
-                height: 10vh;
-                width: 60vh;
+                height: 5vh;
+                width: 50vh;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: center;
-                .back-home-button {
-                    width: 7rem;
-                    margin-left: 0rem;
-                    margin-right: 0rem;
+                .hidden-text {
                     visibility: hidden;
+                }
+                .underline-decoration {
+                    color: red;
+                    text-decoration: underline;
                 }
                 .fetch-wordbook-questions-button {
                     width: 5rem;
@@ -187,10 +192,11 @@ body, html {
             }
         }
         .questions-interaction {
-            height: 10vh;
+            height: 5vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-top: 1vh;
             button {
                 background-image: url("../resource/character_button.png");
                 padding: 0.25rem; /* 按钮内边距 */

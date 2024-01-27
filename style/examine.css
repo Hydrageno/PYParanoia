@@ -2,7 +2,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  height: 110vh;
+  height: 100vh;
   background-image: url("../resource/examine_background.png");
   background-size: cover;
   background-position: center;
@@ -52,7 +52,7 @@ html .article-region .logo-words {
 }
 body .function-region,
 html .function-region {
-  height: 20vh;
+  height: 10vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -66,14 +66,14 @@ html .function-region .right-function-decoration {
   background-position: center;
   background-repeat: no-repeat;
   height: 90%;
-  width: 20vh;
+  width: 12vh;
 }
 body .function-region span,
 html .function-region span {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: '仿宋';
-  color: #646464;
-  cursor: pointer;
+  color: black;
+  cursor: help;
 }
 body .function-region button,
 html .function-region button {
@@ -89,7 +89,7 @@ html .function-region button {
   background-color: #807b75;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
   color: #2d2d2d;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   font-family: '仿宋';
   outline: #e9e0d2 solid 0.1rem;
@@ -107,8 +107,8 @@ html .function-region .function-container {
 }
 body .function-region .function-container .gradewordbook-container,
 html .function-region .function-container .gradewordbook-container {
-  height: 10vh;
-  width: 60vh;
+  height: 5vh;
+  width: 50vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -119,6 +119,11 @@ html .function-region .function-container .gradewordbook-container .back-home-bu
   width: 7rem;
   margin-left: 0rem;
   margin-right: 0rem;
+}
+body .function-region .function-container .gradewordbook-container .underline-decoration,
+html .function-region .function-container .gradewordbook-container .underline-decoration {
+  color: red;
+  text-decoration: underline;
 }
 body .function-region .function-container .gradewordbook-container .option,
 html .function-region .function-container .gradewordbook-container .option {
@@ -132,14 +137,14 @@ html .function-region .function-container .gradewordbook-container .option selec
   background-image: url("../resource/character_button.png");
   border: none;
   outline: none;
-  height: 2.5rem;
-  line-height: 2.5rem;
+  height: 1.75rem;
+  line-height: 1.75rem;
   width: 4rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   font-family: '仿宋';
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   font-weight: bold;
   color: #2d2d2d;
   text-align: center;
@@ -153,19 +158,21 @@ html .function-region .function-container .gradewordbook-container .fetch-gradew
 }
 body .function-region .function-container .wordbook-container,
 html .function-region .function-container .wordbook-container {
-  height: 10vh;
-  width: 60vh;
+  height: 5vh;
+  width: 50vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-body .function-region .function-container .wordbook-container .back-home-button,
-html .function-region .function-container .wordbook-container .back-home-button {
-  width: 7rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
+body .function-region .function-container .wordbook-container .hidden-text,
+html .function-region .function-container .wordbook-container .hidden-text {
   visibility: hidden;
+}
+body .function-region .function-container .wordbook-container .underline-decoration,
+html .function-region .function-container .wordbook-container .underline-decoration {
+  color: red;
+  text-decoration: underline;
 }
 body .function-region .function-container .wordbook-container .fetch-wordbook-questions-button,
 html .function-region .function-container .wordbook-container .fetch-wordbook-questions-button {
@@ -214,10 +221,11 @@ html .card-region div.questions-canvas .questions-container:hover {
 }
 body .card-region .questions-interaction,
 html .card-region .questions-interaction {
-  height: 10vh;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1vh;
 }
 body .card-region .questions-interaction button,
 html .card-region .questions-interaction button {
