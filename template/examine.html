@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生词练习</title>
+    <!--
+        AUTHOR NAME: Tsung Yilee
+        AUTHOR EMAIL: Iliki@yandex.com
+    --> 
+    <link rel="stylesheet" href="../style/examine.css">
+    <script type="text/javascript" src="../package/d3.min.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="article-region">
+            <img src="../resource/inc_crane_left.png" class="left-logo" alt="标志">
+            <div class="logo-words">
+                拼音笔画铸百字，词语成语造千言
+            </div>
+            <img src="../resource/inc_crane_right.png" class="right-logo" alt="标志">
+        </div>
+		<div class="function-region">
+            <img src="../resource/inc_dragon_left.png" class="left-function-decoration" alt="标志">
+            <div class="function-container">
+                <div class="gradewordbook-container">
+                    <button type="button" class="back-home-button" title="主页">返回主页</button>
+                    <span class="examine-decoration">&nbsp;:选择</span>
+                    <div class="option" id="gradePeriodRank">
+                        <select title="年级选择" id="gradePeriodRankSelect">
+                            <option value="一上">一上</option>
+                            <option value="一下">一下</option>
+                            <option value="二上">二上</option>
+                            <option value="二下">二下</option>
+                            <option value="三上">三上</option>
+                            <option value="三下">三下</option>
+                            <option value="四上">四上</option>
+                            <option value="四下">四下</option>
+                            <option value="五上">五上</option>
+                            <option value="五下">五下</option>
+                            <option value="六上">六上</option>
+                            <option value="六下">六下</option>
+                        </select>
+                    </div>
+                    <span class="examine-decoration">搭配</span>
+                    <div class="option" id="hyperMode">
+                        <select title="模式选择" id="hyperModeSelect">
+                            <option value="False">简单</option>
+                            <option value="True">混合</option> 
+                        </select>
+                    </div>
+                    <span class="examine-decoration">以</span>
+                    <button type="button" class="fetch-gradewordbook-questions-button" title="年级生词本练习">答题</button>
+                </div>
+                <div class="wordbook-container">
+                    <button type="button" class="back-home-button" title="主页">返回主页</button>
+                    <span class="examine-decoration">&nbsp; 或选择以生词为基础</span>
+                    <button type="button" class="fetch-wordbook-questions-button" title="普通生词本练习">答题</button>
+                </div>
+            </div>
+            <img src="../resource/inc_hero_right.png" class="right-function-decoration" alt="标志">
+		</div>
+        <div class="card-region">
+            <div class="questions-canvas">
+                <div class="questions-container"></div>
+            </div>
+            <div class="questions-interaction">
+                <button type="button" class="submit-answers" title="提交">提交</button>
+                <button type="button" class="download-analysis" title="下载分析结果">分析结果</button>
+            </div>
+        </div>
+    </div>
+		<script type="text/javascript">
+		</script>
+</body>
+</html>

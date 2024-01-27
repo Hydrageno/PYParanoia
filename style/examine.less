@@ -1,0 +1,221 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 110vh;
+    //设置背景图片
+    background-image: url("../resource/examine_background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //多余的裁剪掉
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    .article-region {
+        height: 30vh;
+        //左右logo水平、垂直居中
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .left-logo, .right-logo {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60%;
+            width: auto;
+        }
+        .left-logo {
+            visibility: hidden;
+        }
+        .logo-words {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: '楷体';
+            white-space: nowrap;
+            width: 65rem;
+            height: 50%;
+            //设置背景图片
+            background-image: url("../resource/inc_canvas_rescale.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat; 
+            filter: opacity(70%);
+        }
+    }
+    .function-region {
+        height: 20vh;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .left-function-decoration, .right-function-decoration {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 90%;
+            width: 20vh;
+        }
+        span {
+            font-size: 2rem;
+            font-family: '仿宋';
+            color: rgb(100, 100, 100);
+            cursor: pointer;
+        }
+        button {
+            background-image: url("../resource/character_button.png");
+            padding: 0.25rem; /* 按钮内边距 */
+            cursor: pointer; /* 鼠标悬停样式 */
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: rgb(128,123,117);
+            box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+            color: rgb(45, 45, 45);
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: '仿宋';
+            outline: rgb(233,224,210) solid 0.1rem;
+            filter: opacity(90%);
+        }
+        button:hover {
+            box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6); /* 悬停时增加更明显的阴影 */
+        }
+        .function-container{
+            display: flex;
+            flex-direction: column; 
+            .gradewordbook-container {
+                height: 10vh;
+                width: 60vh;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .back-home-button {
+                    width: 7rem;
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                }
+                .option{
+                    box-shadow: 0 0 0.05rem #ccc;
+                    border-radius: 0.5rem; 
+                    border: 0.05rem solid #cccccc;
+                    overflow: hidden;
+                    select{
+                        background-image: url("../resource/character_button.png");
+                        border: none;
+                        outline: none;
+                        height: 2.5rem;
+                        line-height: 2.5rem;
+                        width: 4rem;
+                        -moz-appearance: none;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        font-family: '仿宋';
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        color: rgb(45, 45, 45);
+                        text-align: center; 
+                        filter: opacity(90%);
+                    } 
+                }
+                .fetch-gradewordbook-questions-button {
+                    width: 5rem;
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                }
+            }
+            .wordbook-container {
+                height: 10vh;
+                width: 60vh;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .back-home-button {
+                    width: 7rem;
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                    visibility: hidden;
+                }
+                .fetch-wordbook-questions-button {
+                    width: 5rem;
+                    margin-left: 0rem;
+                    margin-right: 0rem;
+                }
+            }
+        }
+    }
+    .card-region {
+        height: 60vh;  //60vh
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div.questions-canvas {
+            //按照比例缩放
+            width: 100vh;
+            height: 50vh;
+            //设置背景图片
+            background-image: url("../resource/examine_canvas_rescale.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: opacity(85%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .questions-container {
+                //750 * 390 px
+                width: 74vh;
+                height: 39vh;
+                display: flex;
+                flex-direction: column;
+                overflow-y: scroll;
+                font-size: 2.15rem;
+                font-family: '楷体';
+            }
+            .questions-container::-webkit-scrollbar {
+                display: none;
+            }
+            .questions-container:hover {
+                cursor: text;
+            }
+        }
+        .questions-interaction {
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            button {
+                background-image: url("../resource/character_button.png");
+                padding: 0.25rem; /* 按钮内边距 */
+                cursor: pointer; /* 鼠标悬停样式 */
+                margin-left: 2rem;
+                margin-right: 2rem;
+                border: none;
+                border-radius: 0.5rem;
+                background-color: rgb(128,123,117);
+                box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+                color: rgb(45, 45, 45);
+                width: 7rem;
+                font-size: 1.5rem;
+                font-weight: bold;
+                font-family: '仿宋';
+                outline: rgb(233,224,210) solid 0.1rem;
+                filter: opacity(90%);
+            }
+            button:hover {
+                box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6); /* 悬停时增加更明显的阴影 */
+            }
+        }
+    }
+}
+body::-webkit-scrollbar, html::-webkit-scrollbar {
+    display: none;
+}
+

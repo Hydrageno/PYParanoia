@@ -1,0 +1,251 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 110vh;
+  background-image: url("../resource/examine_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+body .article-region,
+html .article-region {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .article-region .left-logo,
+html .article-region .left-logo,
+body .article-region .right-logo,
+html .article-region .right-logo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60%;
+  width: auto;
+}
+body .article-region .left-logo,
+html .article-region .left-logo {
+  visibility: hidden;
+}
+body .article-region .logo-words,
+html .article-region .logo-words {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: '楷体';
+  white-space: nowrap;
+  width: 65rem;
+  height: 50%;
+  background-image: url("../resource/inc_canvas_rescale.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(70%);
+}
+body .function-region,
+html .function-region {
+  height: 20vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .function-region .left-function-decoration,
+html .function-region .left-function-decoration,
+body .function-region .right-function-decoration,
+html .function-region .right-function-decoration {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90%;
+  width: 20vh;
+}
+body .function-region span,
+html .function-region span {
+  font-size: 2rem;
+  font-family: '仿宋';
+  color: #646464;
+  cursor: pointer;
+}
+body .function-region button,
+html .function-region button {
+  background-image: url("../resource/character_button.png");
+  padding: 0.25rem;
+  /* 按钮内边距 */
+  cursor: pointer;
+  /* 鼠标悬停样式 */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #807b75;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: '仿宋';
+  outline: #e9e0d2 solid 0.1rem;
+  filter: opacity(90%);
+}
+body .function-region button:hover,
+html .function-region button:hover {
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
+  /* 悬停时增加更明显的阴影 */
+}
+body .function-region .function-container,
+html .function-region .function-container {
+  display: flex;
+  flex-direction: column;
+}
+body .function-region .function-container .gradewordbook-container,
+html .function-region .function-container .gradewordbook-container {
+  height: 10vh;
+  width: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .function-region .function-container .gradewordbook-container .back-home-button,
+html .function-region .function-container .gradewordbook-container .back-home-button {
+  width: 7rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+body .function-region .function-container .gradewordbook-container .option,
+html .function-region .function-container .gradewordbook-container .option {
+  box-shadow: 0 0 0.05rem #ccc;
+  border-radius: 0.5rem;
+  border: 0.05rem solid #cccccc;
+  overflow: hidden;
+}
+body .function-region .function-container .gradewordbook-container .option select,
+html .function-region .function-container .gradewordbook-container .option select {
+  background-image: url("../resource/character_button.png");
+  border: none;
+  outline: none;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  width: 4rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  font-family: '仿宋';
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2d2d2d;
+  text-align: center;
+  filter: opacity(90%);
+}
+body .function-region .function-container .gradewordbook-container .fetch-gradewordbook-questions-button,
+html .function-region .function-container .gradewordbook-container .fetch-gradewordbook-questions-button {
+  width: 5rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+body .function-region .function-container .wordbook-container,
+html .function-region .function-container .wordbook-container {
+  height: 10vh;
+  width: 60vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body .function-region .function-container .wordbook-container .back-home-button,
+html .function-region .function-container .wordbook-container .back-home-button {
+  width: 7rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  visibility: hidden;
+}
+body .function-region .function-container .wordbook-container .fetch-wordbook-questions-button,
+html .function-region .function-container .wordbook-container .fetch-wordbook-questions-button {
+  width: 5rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+body .card-region,
+html .card-region {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region div.questions-canvas,
+html .card-region div.questions-canvas {
+  width: 100vh;
+  height: 50vh;
+  background-image: url("../resource/examine_canvas_rescale.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(85%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region div.questions-canvas .questions-container,
+html .card-region div.questions-canvas .questions-container {
+  width: 74vh;
+  height: 39vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  font-size: 2.15rem;
+  font-family: '楷体';
+}
+body .card-region div.questions-canvas .questions-container::-webkit-scrollbar,
+html .card-region div.questions-canvas .questions-container::-webkit-scrollbar {
+  display: none;
+}
+body .card-region div.questions-canvas .questions-container:hover,
+html .card-region div.questions-canvas .questions-container:hover {
+  cursor: text;
+}
+body .card-region .questions-interaction,
+html .card-region .questions-interaction {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region .questions-interaction button,
+html .card-region .questions-interaction button {
+  background-image: url("../resource/character_button.png");
+  padding: 0.25rem;
+  /* 按钮内边距 */
+  cursor: pointer;
+  /* 鼠标悬停样式 */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #807b75;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  color: #2d2d2d;
+  width: 7rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: '仿宋';
+  outline: #e9e0d2 solid 0.1rem;
+  filter: opacity(90%);
+}
+body .card-region .questions-interaction button:hover,
+html .card-region .questions-interaction button:hover {
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
+  /* 悬停时增加更明显的阴影 */
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
+}
