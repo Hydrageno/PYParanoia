@@ -1,0 +1,123 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("../resource/wordbook_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+body .article-region,
+html .article-region {
+  flex: 0.3;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+body .article-region .left-logo,
+html .article-region .left-logo,
+body .article-region .right-logo,
+html .article-region .right-logo {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 60%;
+  width: auto;
+}
+body .article-region .logo-words,
+html .article-region .logo-words {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: '楷体';
+  white-space: nowrap;
+  width: 65rem;
+  height: 50%;
+  background-image: url("../resource/inc_canvas_rescale.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(70%);
+}
+body .function-region,
+html .function-region {
+  flex: 0.06;
+  height: 6vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .function-region button,
+html .function-region button {
+  background-image: url("../resource/character_button.png");
+  width: 10rem;
+  padding: 0.5rem;
+  /* 按钮内边距 */
+  cursor: pointer;
+  /* 鼠标悬停样式 */
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #807b75;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
+  color: #2d2d2d;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: '仿宋';
+  outline: #e9e0d2 solid 0.1rem;
+  filter: opacity(90%);
+}
+body .function-region button:hover,
+html .function-region button:hover {
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.6);
+  /* 悬停时增加更明显的阴影 */
+}
+body .card-region,
+html .card-region {
+  flex: 0.64;
+  height: 64vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region .wordbook-canvas,
+html .card-region .wordbook-canvas {
+  width: 119vh;
+  height: 60vh;
+  background-image: url("../resource/wordbook_canvas.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: opacity(95%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region .wordbook-canvas .wordbook-container,
+html .card-region .wordbook-canvas .wordbook-container {
+  width: 93vh;
+  height: 45vh;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  font-size: 2.15rem;
+  font-family: '楷体';
+}
+body .card-region .wordbook-canvas .wordbook-container::-webkit-scrollbar,
+html .card-region .wordbook-canvas .wordbook-container::-webkit-scrollbar {
+  display: none;
+}
+body .card-region .wordbook-canvas .wordbook-container:hover,
+html .card-region .wordbook-canvas .wordbook-container:hover {
+  cursor: text;
+}
