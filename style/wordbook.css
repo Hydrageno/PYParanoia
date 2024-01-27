@@ -56,6 +56,16 @@ html .function-region {
   align-items: center;
   justify-content: center;
 }
+body .function-region .left-wordbook-button-decoration,
+html .function-region .left-wordbook-button-decoration,
+body .function-region .right-wordbook-button-decoration,
+html .function-region .right-wordbook-button-decoration {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+}
 body .function-region button,
 html .function-region button {
   background-image: url("../resource/character_button.png");
