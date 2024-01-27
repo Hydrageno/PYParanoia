@@ -1,0 +1,182 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    //设置背景图片
+    background-image: url("../resource/character_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    //多余的裁剪掉
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .article-region {
+        flex: 0.3;
+        height: 30vh;
+        //左右logo水平、垂直居中
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        .left-logo, .right-logo {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60%;
+            width: auto;
+        }
+        .logo-words {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: '楷体';
+            white-space: nowrap;
+            width: 65rem;
+            height: 50%;
+            //设置背景图片
+            background-image: url("../resource/inc_canvas_rescale.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat; 
+            filter: opacity(70%);
+        }
+    }
+    .search-region {
+        flex: 0.1;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .left-search-decoration, .right-search-decoration {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: auto;
+        }
+        .search-bar {
+            width: 35rem; /* 输入框宽度 */
+            padding: 0.5rem; /* 输入框内边距 */
+            margin-right: 0;
+            border-radius: 0.5rem 0px 0px 0.5rem;
+            border: none;
+            color: darkgray;
+            font-size: 2.15rem;
+            font-family: '仿宋';
+            box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+        }
+        .search-bar:focus{
+            outline: rgb(233,224,210) solid 0.1rem;
+        }
+        .search-button {
+            width: 7rem;
+            margin-left: 0;
+            padding: 0.5rem; /* 按钮内边距 */
+            cursor: pointer; /* 鼠标悬停样式 */
+            border: none;
+            background-color: rgb(128,123,117);
+            border-radius: 0px 0.5rem 0.5rem 0px;
+            color: #fff;
+            font-size: 2.15rem;
+            font-family: '仿宋';
+            box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+        }
+        .search-button:hover{
+            background-color: rgb(233,224,210);
+            color: black;
+        }
+    }
+    .function-region {
+        flex: 0.1;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .back-home-button,  .redirect-wordbook-button, .redirect-examine-button {
+            background-image: url("../resource/character_button.png");
+            width: 10rem;
+            padding: 0.5rem; /* 按钮内边距 */
+            cursor: pointer; /* 鼠标悬停样式 */
+            margin-left: 2rem;
+            margin-right: 2rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: rgb(128,123,117);
+            box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            color: rgb(45, 45, 45);
+            font-size: 1.5rem;
+            font-weight: bold;
+            font-family: '仿宋';
+            outline: rgb(233,224,210) solid 0.1rem;
+            filter: opacity(90%);
+        }
+        .back-home-button:hover,  .redirect-wordbook-button:hover, .redirect-examine-button:hover {
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); /* 悬停时增加更明显的阴影 */
+        }
+    }
+    .card-region {
+        flex: 0.5; //0.6
+        height: 50vh;  //60vh
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        .blackboard-region:hover {
+            cursor: pointer;
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.6); /* 悬停时增加更明显的阴影 */
+        }
+        .blackboard-region {
+            width: 75vh;
+            height: 42vh;
+            border: none;
+            margin-left: 2rem;
+            box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            //设置背景图片
+            background-image: url("../resource/blackboard.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            //内部子元素居中
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .writable-region {
+                width: 72vh;
+                height: 39vh;
+                //当过多生词时，设置滚动条
+                overflow-y: scroll;
+                //设置内部的字体所在区域大小
+                display: flex;
+                flex-direction: column;
+                div {
+                    font-size: 2.15rem;
+                    font-family: '楷体';
+                    color: rgb(250, 250, 250);
+                } 
+            }
+            .writable-region::-webkit-scrollbar{
+                //隐藏滚动条
+                display: none;
+            }
+            .writable-region:hover {
+                cursor: text;
+            }
+        }
+        .illustration {
+            position: absolute;
+            left: 70vw;
+            width: 42vh;
+            height: 42vh;
+            overflow: hidden;
+            //设置背景图片
+            background-image: url("../resource/child_readbook.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
