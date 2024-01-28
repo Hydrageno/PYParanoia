@@ -8,9 +8,9 @@ from pypinyin import pinyin
 
 def process_gradewordbook():
     '''
-    grade：年级
-    period：上下册
-    newword_gradeperiod：对应时间点的新词
+    功能：生成各个年级的生词
+    参数：无
+    返回：无
     '''
     grade = None
     period = None
