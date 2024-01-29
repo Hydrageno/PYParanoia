@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("../resource/character_background.jpg");
+  background-image: url("../resource/character/character_background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ html .article-region .logo-words {
   white-space: nowrap;
   width: 65rem;
   height: 50%;
-  background-image: url("../resource/inc_canvas_rescale.png");
+  background-image: url("../resource/character/inc_canvas_rescale.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@ body .function-region .back-home-button,
 html .function-region .back-home-button,
 body .function-region .redirect-wordbook-button,
 html .function-region .redirect-wordbook-button {
-  background-image: url("../resource/character_button.png");
+  background-image: url("../resource/character/character_button.png");
   width: 10rem;
   padding: 0.5rem;
   /* 按钮内边距 */
@@ -179,7 +179,7 @@ html .card-region .blackboard-region {
   border: none;
   margin-left: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  background-image: url("../resource/blackboard.jpg");
+  background-image: url("../resource/character/blackboard.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
