@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("../resource/wordbook_background.png");
+  background-image: url("../resource/wordbook/wordbook_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ html .article-region .logo-words {
   white-space: nowrap;
   width: 65rem;
   height: 50%;
-  background-image: url("../resource/inc_canvas_rescale.png");
+  background-image: url("../resource/wordbook/inc_canvas_rescale.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -68,7 +68,7 @@ html .function-region .right-wordbook-button-decoration {
 }
 body .function-region button,
 html .function-region button {
-  background-image: url("../resource/character_button.png");
+  background-image: url("../resource/wordbook/character_button.png");
   width: 10rem;
   padding: 0.5rem;
   /* 按钮内边距 */
@@ -104,7 +104,7 @@ body .card-region .wordbook-canvas,
 html .card-region .wordbook-canvas {
   width: 119vh;
   height: 60vh;
-  background-image: url("../resource/wordbook_canvas.png");
+  background-image: url("../resource/wordbook/wordbook_canvas.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
