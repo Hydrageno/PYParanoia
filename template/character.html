@@ -24,87 +24,33 @@
             <!--该区域涵盖搜索-->
             <img src="../resource/character/search_input_left.png" class="left-search-decoration" alt="标志">
             <input type="text" class="search-bar" id="searchBar" placeholder="继续输入单个汉字以开始检索">
-            <button type="button" class="search-button" onclick="searchInfo()">搜索</button>
+            <button type="button" class="search-button" onclick="setTargetCharacter()">搜索</button>
             <img src="../resource/character/search_input_right.png" class="right-search-decoration" alt="标志">
         </div>
 		<div class="function-region">
-			<button type="button" class="add-wordbook-button" title="生词+1">加入生词</button>
-			<button type="button" class="back-home-button" title="主页">返回主页</button>
-			<button type="button" class="redirect-wordbook-button" title="看生词">查看生词</button>
+			<button type="button" class="add-wordbook-button" title="生词+1" onclick="addWordbook()">加入生词</button>
+			<button type="button" class="back-home-button" title="主页" onclick="backHome()">返回主页</button>
+			<button type="button" class="redirect-wordbook-button" title="看生词" onclick="redirectWordbook()">查看生词</button>
 		</div>
         <div class="card-region">
             <div class="giant-character"></div>
             <div class="blackboard-region">
 				<div class="writable-region">
-					<div class="pinyin-region">拼音：</div>
-					<div class="stroke-region">笔画：</div>
-					<div class="phrase-region">词语：</div>
-					<div class="phrase-explanation-region">词语解释：“国”本义指有疆界的地区，引申指某一地区，区域。又引申指分封的诸侯国。</div>
+                    <div class="cue-region"></div>
+					<div class="pinyin-region"></div>
+					<div class="stroke-region"></div>
+					<div class="phrase-region"></div>
+                    <div class="phrase-pinyin-region"></div>
+					<div class="phrase-explanation-region"></div>
+                    <div class="phrase-explanation-pinyin-region"></div>
 					<div class="idiom-region"></div>
+                    <div class="idiom-pinyin-region"></div>
 					<div class="idiom-explanation-region"></div>
+                    <div class="idiom-explanation-pinyin-region"></div>
 				</div>
 			</div>
         </div>
     </div>
-		<script type="text/javascript">
-			var body = d3.select(".giant-character");
-            function createChar(givenChar){
-	            var color = '#c41b14', size = 42; 
-                var svg = d3.select(".giant-character").append("svg");
-	            svg.attr('width', "42vh").attr('height', "42vh");
-	            //内横线
-	            svg.append('line')
-		            .attr('x1',0)
-		            .attr('y1',String(size/2) + "vh")
-		            .attr('x2',String(size) + "vh")
-		            .attr('y2',String(size/2) + "vh")
-		            .attr('stroke',color)
-		            .attr('stroke-width', 1);
-                //内竖线
-	            svg.append('line')
-		            .attr('x1',String(size/2) + "vh")
-		            .attr('y1',0)
-		            .attr('x2',String(size/2) + "vh")
-		            .attr('y2',String(size) + "vh")
-		            .attr('stroke',color)
-		            .attr('stroke-width', 1);
-	            //内斜线1
-	            svg.append('line')
-		            .attr('x1',0)
-		            .attr('y1',0)
-		            .attr('x2',String(size) + "vh")
-		            .attr('y2',String(size) + "vh")
-		            .attr('stroke',color)
-		            .attr('stroke-dasharray', '5,5')
-		            .attr('stroke-width', 1);
-	            //内斜线2
-	            svg.append('line')
-		            .attr('x1',0)
-		            .attr('y1',String(size) + "vh")
-		            .attr('x2',String(size) + "vh")
-		            .attr('y2',0)
-		            .attr('stroke',color)
-		            .attr('stroke-dasharray', '5,5')
-		            .attr('stroke-width', 1);
-	            //外框线
-	            svg.append('rect')
-		            .attr('fill','transparent')
-		            .attr('stroke',color)
-		            .attr('stroke-width', 5)
-		            .attr('x',0)
-		            .attr('y',0)
-		            .attr('width',String(size) + "vh")
-		            .attr('height',String(size) + "vh");
-	            //汉字
-	            svg.append('text')
-		            .attr('x',"4vh")
-		            .attr('y',String(size/2+10) + "vh")
-		            .style('font-size', '20rem')
-		            .style('font-family', 'Kaiti')
-		            .attr('fill','black')
-		            .text(givenChar);
-            }
-            createChar('龍');
-		</script>
+	<script type="text/javascript" src="../js/character.js"></script>
 </body>
 </html>

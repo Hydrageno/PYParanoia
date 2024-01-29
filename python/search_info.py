@@ -26,7 +26,7 @@ def search_fixedformat_phrase(given_fixedformat):
         random_texts_pinyin = [item["text_pinyin"] for item in random_ffps]
         return ("FOUND", (random_words, random_words_pinyin, random_texts, random_texts_pinyin))
     else:
-        return ("NOINFO", None)
+        return ("NOINFO", "NOINFO")
 
 
 def search_idiom(given_char):
@@ -47,7 +47,7 @@ def search_idiom(given_char):
         random_explanation = random_idiom_info["explanation"]
         return ("FOUND", (random_word, random_pinyin, random_explanation))
     else:
-        return ("NOINFO", None)   
+        return ("NOINFO", "NOINFO")   
 
 
 def search_stroke(given_char):
@@ -98,7 +98,7 @@ def search_stroke(given_char):
                 for single_stroke in stroke_list:
                     convert_stroke_list.append(stroke_dict[single_stroke])
                 return ("FOUND", convert_stroke_list)
-    return ("NOINFO", None)
+    return ("NOINFO", "NOINFO")
 
 
 def search_wordtextpair(given_char):
@@ -123,7 +123,7 @@ def search_wordtextpair(given_char):
                         return ("FOUND", (random_word, random_word_pinyin, random_text, random_text_pinyin))
                     char_info_nums -= 1
             # 找了一圈也没找到，说明就是没有
-            return ("NOINFO", None)
+            return ("NOINFO", "NOINFO")
 
 
 def search_wordbook_composed():
@@ -137,7 +137,7 @@ def search_wordbook_composed():
     for wordbook_info in wordbook_json:
         long_result += wordbook_info['char'] + ':' + wordbook_info['pinyin'] + ' '
     if long_result == '':
-        return ("NOINFO", None)
+        return ("NOINFO", "NOINFO")
     else:
         return ("FOUND", long_result)
 
