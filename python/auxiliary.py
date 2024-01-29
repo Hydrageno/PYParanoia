@@ -76,5 +76,17 @@ def read_text_by_machine(text):
     # 等待语音输出完成
     engine.runAndWait()
 
+
+def init_database():
+    '''
+    功能：初始化项目数据
+    '''
+    filepath_list = ['./database/data/wordbook.json']
+    # 初始化生词本
+    with open('tmp.json', 'w', encoding='utf-8') as file:
+        json.dump([], file, ensure_ascii=False, indent=2)
+
 if __name__ == "__main__":
-    print(check_wordbook_empty())
+    switch_boom = 1
+    if switch_boom == 1:
+        init_database()
