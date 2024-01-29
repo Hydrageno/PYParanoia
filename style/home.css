@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("../resource/home_background.jpg");
+  background-image: url("../resource/home/home_background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@ html .article-region .logo-words {
   white-space: nowrap;
   width: 65rem;
   height: 50%;
-  background-image: url("../resource/inc_canvas_rescale.png");
+  background-image: url("../resource/home/inc_canvas_rescale.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
