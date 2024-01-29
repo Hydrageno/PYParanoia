@@ -112,22 +112,115 @@ html .card-region {
   justify-content: center;
   align-items: center;
 }
-body .card-region div,
-html .card-region div {
-  width: 15rem;
+body .card-region div.character-card,
+html .card-region div.character-card,
+body .card-region div.wordbook-card,
+html .card-region div.wordbook-card,
+body .card-region div.examine-card,
+html .card-region div.examine-card,
+body .card-region div.phrase-card,
+html .card-region div.phrase-card {
+  width: 25vh;
   height: 70%;
-  background-color: rbga(224, 224, 224, 0.9);
-  filter: opacity(95%);
   border-radius: 1rem;
-  border: none;
+  border-style: solid;
+  border-color: #dedede;
+  border-width: 0.05rem;
   margin: 2rem;
-  font-size: 1.25rem;
-  font-family: '仿宋';
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  font-family: '仿宋';
+  color: #3e4040;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
-body .card-region div:hover,
-html .card-region div:hover {
+body .card-region div.character-card .card-theme,
+html .card-region div.character-card .card-theme,
+body .card-region div.wordbook-card .card-theme,
+html .card-region div.wordbook-card .card-theme,
+body .card-region div.examine-card .card-theme,
+html .card-region div.examine-card .card-theme,
+body .card-region div.phrase-card .card-theme,
+html .card-region div.phrase-card .card-theme {
+  flex: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  font-size: 2.4rem;
+  font-weight: bolder;
+  text-decoration: underline;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .card-region div.character-card .card-content-container,
+html .card-region div.character-card .card-content-container,
+body .card-region div.wordbook-card .card-content-container,
+html .card-region div.wordbook-card .card-content-container,
+body .card-region div.examine-card .card-content-container,
+html .card-region div.examine-card .card-content-container,
+body .card-region div.phrase-card .card-content-container,
+html .card-region div.phrase-card .card-content-container {
+  flex: 8;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .card-region div.character-card .card-content-container .card-content,
+html .card-region div.character-card .card-content-container .card-content,
+body .card-region div.wordbook-card .card-content-container .card-content,
+html .card-region div.wordbook-card .card-content-container .card-content,
+body .card-region div.examine-card .card-content-container .card-content,
+html .card-region div.examine-card .card-content-container .card-content,
+body .card-region div.phrase-card .card-content-container .card-content,
+html .card-region div.phrase-card .card-content-container .card-content {
+  width: 90%;
+  height: 100%;
+  text-align: justify;
+  text-indent: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.5rem;
+}
+body .card-region div.character-card .card-content-container .card-content span.theme-show,
+html .card-region div.character-card .card-content-container .card-content span.theme-show,
+body .card-region div.wordbook-card .card-content-container .card-content span.theme-show,
+html .card-region div.wordbook-card .card-content-container .card-content span.theme-show,
+body .card-region div.examine-card .card-content-container .card-content span.theme-show,
+html .card-region div.examine-card .card-content-container .card-content span.theme-show,
+body .card-region div.phrase-card .card-content-container .card-content span.theme-show,
+html .card-region div.phrase-card .card-content-container .card-content span.theme-show {
+  display: flex;
+  text-align: center;
+}
+body .card-region div.character-card:hover,
+html .card-region div.character-card:hover,
+body .card-region div.wordbook-card:hover,
+html .card-region div.wordbook-card:hover,
+body .card-region div.examine-card:hover,
+html .card-region div.examine-card:hover,
+body .card-region div.phrase-card:hover,
+html .card-region div.phrase-card:hover {
   cursor: pointer;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   /* 悬停时增加更明显的阴影 */
+  color: black;
+}
+body .card-region .character-card,
+html .card-region .character-card {
+  background-image: url("../resource/home/character_card_background.png");
+}
+body .card-region .wordbook-card,
+html .card-region .wordbook-card {
+  background-image: url("../resource/home/wordbook-card-background.png");
+}
+body .card-region .examine-card,
+html .card-region .examine-card {
+  background-image: url("../resource/home/exmaine_card_background.png");
+}
+body .card-region .phrase-card,
+html .card-region .phrase-card {
+  background-image: url("../resource/home/phrase_card_background.png");
 }

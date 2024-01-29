@@ -3,7 +3,7 @@
         padding: 0;
         height: 100vh;
         //设置背景图片
-        background-image: url("../resource/home_background.jpg");
+        background-image: url("../resource/home/home_background.jpg");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -37,7 +37,7 @@
                 width: 65rem;
                 height: 50%;
                 //设置背景图片
-                background-image: url("../resource/inc_canvas_rescale.png");
+                background-image: url("../resource/home/inc_canvas_rescale.png");
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat; 
@@ -95,21 +95,70 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            div {
-                width: 15rem;
+            div.character-card, div.wordbook-card, div.examine-card, div.phrase-card {
+                width: 25vh;
                 height: 70%;
-                background-color: rbga(224,224,224,0.9);
-                filter: opacity(95%);
                 border-radius: 1rem;
-                border: none;
+                border-style: solid;
+                border-color: rgb(222, 222, 222);
+                border-width: 0.05rem;
                 margin: 2rem;
-                font-size: 1.25rem;
-                font-family: '仿宋';
                 box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+                font-family: '仿宋';
+                color: rgb(62,64,64);
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: flex;
+                flex-direction: column;
+                .card-theme {
+                    flex: 2;
+                    background-color: rgba(255, 255, 255, 0.7); //调整背景图片明暗程度
+                    font-size: 2.40rem;
+                    font-weight: bolder;
+                    text-decoration: underline;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .card-content-container {
+                    flex: 8;
+                    background-color: rgba(255, 255, 255, 0.7); //调整背景图片明暗程度
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .card-content {
+                        width: 90%;
+                        height: 100%;
+                        text-align: justify;
+                        text-indent: 2rem;
+                        font-size: 2.00rem;
+                        font-weight: bold;
+                        line-height: 2.50rem;
+                        span.theme-show {
+                            display: flex;
+                            text-align: center;
+                        }
+                    }
+                }
             }
-            div:hover {
+            div.character-card:hover, div.wordbook-card:hover, div.examine-card:hover, div.phrase-card:hover {
                 cursor: pointer;
                 box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); /* 悬停时增加更明显的阴影 */
+                color: black;
+            }
+            .character-card {
+                background-image: url("../resource/home/character_card_background.png");
+            }
+            .wordbook-card {
+                background-image: url("../resource/home/wordbook-card-background.png")
+            }
+            .examine-card {
+                background-image: url("../resource/home/exmaine_card_background.png")
+            }
+            .phrase-card {
+                background-image: url("../resource/home/phrase_card_background.png")
             }
         }
     }
