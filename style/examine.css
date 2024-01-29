@@ -3,7 +3,7 @@ html {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("../resource/examine_background.png");
+  background-image: url("../resource/examine/examine_background.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@ html .article-region .logo-words {
   white-space: nowrap;
   width: 65rem;
   height: 50%;
-  background-image: url("../resource/inc_canvas_rescale.png");
+  background-image: url("../resource/examine/inc_canvas_rescale.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -77,7 +77,7 @@ html .function-region span {
 }
 body .function-region button,
 html .function-region button {
-  background-image: url("../resource/character_button.png");
+  background-image: url("../resource/examine/character_button.png");
   padding: 0.25rem;
   /* 按钮内边距 */
   cursor: pointer;
@@ -134,7 +134,7 @@ html .function-region .function-container .gradewordbook-container .option {
 }
 body .function-region .function-container .gradewordbook-container .option select,
 html .function-region .function-container .gradewordbook-container .option select {
-  background-image: url("../resource/character_button.png");
+  background-image: url("../resource/examine/character_button.png");
   border: none;
   outline: none;
   height: 1.75rem;
@@ -192,7 +192,7 @@ body .card-region div.questions-canvas,
 html .card-region div.questions-canvas {
   width: 100vh;
   height: 50vh;
-  background-image: url("../resource/examine_canvas_rescale.png");
+  background-image: url("../resource/examine/examine_canvas_rescale.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -229,7 +229,7 @@ html .card-region .questions-interaction {
 }
 body .card-region .questions-interaction button,
 html .card-region .questions-interaction button {
-  background-image: url("../resource/character_button.png");
+  background-image: url("../resource/examine/character_button.png");
   padding: 0.25rem;
   /* 按钮内边距 */
   cursor: pointer;
