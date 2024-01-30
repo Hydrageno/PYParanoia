@@ -24,6 +24,7 @@ body, html {
             background-repeat: no-repeat;
             height: 60%;
             width: auto;
+            -webkit-user-drag: none;
         }
         .left-logo {
             visibility: hidden;
@@ -58,6 +59,7 @@ body, html {
             background-repeat: no-repeat;
             height: 100%;
             width: 15vh;
+            -webkit-user-drag: none;
         }
         button {
             background-image: url("../resource/examine/character_button.png");
@@ -200,9 +202,15 @@ body, html {
                     background-color: transparent;
                     font-family: '仿宋';
                     text-align: center;
+                    width: 5rem;
                 }
                 .question-reply:focus {
                     outline: none;
+                }
+                .response-template {
+                    .response-message, .response-answer {
+                        color: red;
+                    }
                 }
             }
             .questions-container::-webkit-scrollbar {

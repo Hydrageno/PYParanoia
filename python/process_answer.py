@@ -119,7 +119,7 @@ def process_answer_by_gradewordbook(grade, period, hybrid_mode):
     with open('./database/states/gradewordbook_char_distribution.json', 'w', encoding='utf-8') as file:
         json.dump(sorted_states, file, indent=2, ensure_ascii=False)
     # 记录用户本次作答情况
-    with open('./database/states/response_info.json', 'w', encoding='utf-8') as file:
+    with open('./database/process/response_info.json', 'w', encoding='utf-8') as file:
         json.dump(response_info, file, indent=2, ensure_ascii=False)    
     if hybrid_mode is True:
         # 如果是混合答题模式需要按年级划分答题情况
@@ -233,7 +233,7 @@ def process_answer_by_wordbook():
     with open('./database/states/wordbook_char_distribution.json', 'w', encoding='utf-8') as file:
         json.dump(sorted_states, file, indent=2, ensure_ascii=False)
     # 记录用户本次作答情况
-    with open('./database/states/response_info.json', 'w', encoding='utf-8') as file:
+    with open('./database/process/response_info.json', 'w', encoding='utf-8') as file:
         json.dump(response_info, file, indent=2, ensure_ascii=False) 
     # 排序生词本情况
     sorted_wordbook_json = sorted(wordbook_json, key=lambda x: x["weight"], reverse=True)

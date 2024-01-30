@@ -28,6 +28,7 @@ html .article-region .right-logo {
   background-repeat: no-repeat;
   height: 60%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .article-region .left-logo,
 html .article-region .left-logo {
@@ -67,6 +68,7 @@ html .function-region .right-function-decoration {
   background-repeat: no-repeat;
   height: 100%;
   width: 15vh;
+  -webkit-user-drag: none;
 }
 body .function-region button,
 html .function-region button {
@@ -233,10 +235,17 @@ html .card-region div.questions-canvas .questions-container .question-reply {
   background-color: transparent;
   font-family: '仿宋';
   text-align: center;
+  width: 5rem;
 }
 body .card-region div.questions-canvas .questions-container .question-reply:focus,
 html .card-region div.questions-canvas .questions-container .question-reply:focus {
   outline: none;
+}
+body .card-region div.questions-canvas .questions-container .response-template .response-message,
+html .card-region div.questions-canvas .questions-container .response-template .response-message,
+body .card-region div.questions-canvas .questions-container .response-template .response-answer,
+html .card-region div.questions-canvas .questions-container .response-template .response-answer {
+  color: red;
 }
 body .card-region div.questions-canvas .questions-container::-webkit-scrollbar,
 html .card-region div.questions-canvas .questions-container::-webkit-scrollbar {
