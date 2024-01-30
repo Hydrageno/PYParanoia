@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100vh;
     //设置背景图片
-    background-image: url("../resource/examine_background.png");
+    background-image: url("../resource/examine/examine_background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@ body, html {
             width: 65rem;
             height: 50%;
             //设置背景图片
-            background-image: url("../resource/inc_canvas_rescale.png");
+            background-image: url("../resource/examine/inc_canvas_rescale.png");
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat; 
@@ -66,7 +66,7 @@ body, html {
             cursor: help;
         }
         button {
-            background-image: url("../resource/character_button.png");
+            background-image: url("../resource/examine/character_button.png");
             padding: 0.25rem; /* 按钮内边距 */
             cursor: pointer; /* 鼠标悬停样式 */
             margin-left: 2rem;
@@ -110,7 +110,7 @@ body, html {
                     border: 0.05rem solid #cccccc;
                     overflow: hidden;
                     select{
-                        background-image: url("../resource/character_button.png");
+                        background-image: url("../resource/examine/character_button.png");
                         border: none;
                         outline: none;
                         height: 1.75rem;
@@ -163,10 +163,10 @@ body, html {
         align-items: center;
         div.questions-canvas {
             //按照比例缩放
-            width: 100vh;
+            width: 150vh;
             height: 50vh;
             //设置背景图片
-            background-image: url("../resource/examine_canvas_rescale.png");
+            background-image: url("../resource/examine/examine_canvas_rescale_v3.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -175,14 +175,27 @@ body, html {
             justify-content: center;
             align-items: center;
             .questions-container {
-                //750 * 390 px
-                width: 74vh;
+                //112 * 390 px
+                width: 112vh;
                 height: 39vh;
                 display: flex;
                 flex-direction: column;
                 overflow-y: scroll;
                 font-size: 2.15rem;
                 font-family: '楷体';
+                .prefix {
+                    color: red;
+                }
+                .question-reply {
+                    font-size: 2.00rem;
+                    border: none; /* 取消所有边框 */
+                    border-bottom: 0.03rem solid black; /* 底部边框样式 */
+                    background-color: transparent;
+                    font-family: '仿宋';
+                }
+                .question-reply:focus {
+                    outline: none;
+                }
             }
             .questions-container::-webkit-scrollbar {
                 display: none;
@@ -198,7 +211,7 @@ body, html {
             align-items: center;
             margin-top: 1vh;
             button {
-                background-image: url("../resource/character_button.png");
+                background-image: url("../resource/examine/character_button.png");
                 padding: 0.25rem; /* 按钮内边距 */
                 cursor: pointer; /* 鼠标悬停样式 */
                 margin-left: 2rem;

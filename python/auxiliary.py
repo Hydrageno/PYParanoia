@@ -86,7 +86,37 @@ def init_database():
     with open('tmp.json', 'w', encoding='utf-8') as file:
         json.dump([], file, ensure_ascii=False, indent=2)
 
+
+def regularize_questions(filename):
+    '''
+    功能：规范化题目内容
+    '''
+    with open(f'./database/selected/selected_{filename}_questions.json', 'r', encoding='utf-8') as file:
+        select_questions_json = json.load(file)
+    process_questions = []
+    selected_num = len(select_questions_json)
+    for i in range(0, selected_num):
+        select_question_info = select_questions_json[i]
+        current_question_id = str(i + 1)
+        if select_question_info["question_type"] == 1:
+            current_question_maintext = f"请为“{select_question_info['char']}”找出拼音哦~"
+            current_question_desc = "龍的拼音：lóng第2声，所以填入long2"
+        else:
+            source_question_desc = select_question_info["question_desc"].split('-')
+            current_question_maintext = f"请为“{source_question_desc[0]}”（{source_question_desc[1]}）补充字"
+            current_question_desc = f"{source_question_desc[2]}（{source_question_desc[3]}）"
+        process_questions.append({
+            "question_id": current_question_id,
+            "question_maintext": current_question_maintext,
+            "question_desc": current_question_desc
+        }) 
+    with open(f'./database/regular/regularized_{filename}_questions.json', 'w', encoding='utf-8') as file:
+        json.dump(process_questions, file, ensure_ascii=False, indent=2)
+
+
 if __name__ == "__main__":
-    switch_boom = 1
+    switch_boom = 2
     if switch_boom == 1:
         init_database()
+    elif switch_boom == 2:
+        regularize_questions('gradewordbook')

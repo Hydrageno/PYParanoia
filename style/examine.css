@@ -190,9 +190,9 @@ html .card-region {
 }
 body .card-region div.questions-canvas,
 html .card-region div.questions-canvas {
-  width: 100vh;
+  width: 150vh;
   height: 50vh;
-  background-image: url("../resource/examine/examine_canvas_rescale.png");
+  background-image: url("../resource/examine/examine_canvas_rescale_v3.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -203,13 +203,31 @@ html .card-region div.questions-canvas {
 }
 body .card-region div.questions-canvas .questions-container,
 html .card-region div.questions-canvas .questions-container {
-  width: 74vh;
+  width: 112vh;
   height: 39vh;
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
   font-size: 2.15rem;
   font-family: '楷体';
+}
+body .card-region div.questions-canvas .questions-container .prefix,
+html .card-region div.questions-canvas .questions-container .prefix {
+  color: red;
+}
+body .card-region div.questions-canvas .questions-container .question-reply,
+html .card-region div.questions-canvas .questions-container .question-reply {
+  font-size: 2rem;
+  border: none;
+  /* 取消所有边框 */
+  border-bottom: 0.03rem solid black;
+  /* 底部边框样式 */
+  background-color: transparent;
+  font-family: '仿宋';
+}
+body .card-region div.questions-canvas .questions-container .question-reply:focus,
+html .card-region div.questions-canvas .questions-container .question-reply:focus {
+  outline: none;
 }
 body .card-region div.questions-canvas .questions-container::-webkit-scrollbar,
 html .card-region div.questions-canvas .questions-container::-webkit-scrollbar {
