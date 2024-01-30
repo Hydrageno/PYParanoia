@@ -29,6 +29,7 @@ html .article-region .right-logo {
   background-repeat: no-repeat;
   height: 60%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .article-region .logo-words,
 html .article-region .logo-words {
@@ -64,6 +65,7 @@ html .search-region .right-search-decoration {
   background-repeat: no-repeat;
   height: 100%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .search-region .search-bar,
 html .search-region .search-bar {
@@ -78,6 +80,15 @@ html .search-region .search-bar {
   font-size: 2.15rem;
   font-family: '仿宋';
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-image: url("../resource/home/searchbar_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+  outline: #c8c8c8 solid 0.01rem;
+}
+body .search-region .search-bar::placeholder,
+html .search-region .search-bar::placeholder {
+  color: #000000;
 }
 body .search-region .search-bar:focus,
 html .search-region .search-bar:focus {
