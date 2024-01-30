@@ -29,6 +29,7 @@ html .article-region .right-logo {
   background-repeat: no-repeat;
   height: 60%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .article-region .logo-words,
 html .article-region .logo-words {
@@ -64,6 +65,7 @@ html .search-region .right-search-decoration {
   background-repeat: no-repeat;
   height: 100%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .search-region .search-bar,
 html .search-region .search-bar {
@@ -74,14 +76,22 @@ html .search-region .search-bar {
   margin-right: 0;
   border-radius: 0.5rem 0px 0px 0.5rem;
   border: none;
-  color: darkgray;
   font-size: 2.15rem;
   font-family: '仿宋';
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-image: url("../resource/phrase/searchbar_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+  outline: #c8c8c8 solid 0.01rem;
+}
+body .search-region .search-bar::placeholder,
+html .search-region .search-bar::placeholder {
+  color: #000000;
 }
 body .search-region .search-bar:focus,
 html .search-region .search-bar:focus {
-  outline: #e9e0d2 solid 0.1rem;
+  outline: #eabf7a solid 0.1rem;
 }
 body .search-region .search-button,
 html .search-region .search-button {

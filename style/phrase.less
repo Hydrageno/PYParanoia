@@ -25,6 +25,7 @@ body, html {
             background-repeat: no-repeat;
             height: 60%;
             width: auto;
+            -webkit-user-drag: none;
         }
         .logo-words {
             display: flex;
@@ -56,6 +57,7 @@ body, html {
             background-repeat: no-repeat;
             height: 100%;
             width: auto;
+            -webkit-user-drag: none;
         }
         .search-bar {
             width: 35rem; /* 输入框宽度 */
@@ -63,13 +65,21 @@ body, html {
             margin-right: 0;
             border-radius: 0.5rem 0px 0px 0.5rem;
             border: none;
-            color: darkgray;
             font-size: 2.15rem;
             font-family: '仿宋';
             box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
+            //设置背景图片
+            background-image: url("../resource/phrase/searchbar_background.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.85;
+            outline: rgb(200, 200, 200) solid 0.01rem;
+        }
+        .search-bar::placeholder {
+            color: rgba(0, 0, 0, 1.00);
         }
         .search-bar:focus{
-            outline: rgb(233,224,210) solid 0.1rem;
+            outline: rgb(234, 191, 122) solid 0.1rem;
         }
         .search-button {
             width: 7rem;
