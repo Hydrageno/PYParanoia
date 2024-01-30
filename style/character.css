@@ -29,6 +29,7 @@ html .article-region .right-logo {
   background-repeat: no-repeat;
   height: 60%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .article-region .logo-words,
 html .article-region .logo-words {
@@ -64,6 +65,7 @@ html .search-region .right-search-decoration {
   background-repeat: no-repeat;
   height: 100%;
   width: auto;
+  -webkit-user-drag: none;
 }
 body .search-region .search-bar,
 html .search-region .search-bar {
@@ -74,10 +76,19 @@ html .search-region .search-bar {
   margin-right: 0;
   border-radius: 0.5rem 0px 0px 0.5rem;
   border: none;
-  color: darkgray;
+  color: #000000;
   font-size: 2.15rem;
   font-family: '仿宋';
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  background-image: url("../resource/home/searchbar_background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+  outline: #c8c8c8 solid 0.01rem;
+}
+body .search-region .search-bar::placeholder,
+html .search-region .search-bar::placeholder {
+  color: #000000;
 }
 body .search-region .search-bar:focus,
 html .search-region .search-bar:focus {
@@ -201,6 +212,12 @@ html .card-region .blackboard-region .writable-region div {
   line-height: 2.5rem;
   font-family: '楷体';
   color: #fafafa;
+}
+body .card-region .blackboard-region .writable-region div .prefix,
+html .card-region .blackboard-region .writable-region div .prefix {
+  color: rgba(255, 55, 0, 0.9);
+  -webkit-user-select: none;
+  user-select: none;
 }
 body .card-region .blackboard-region .writable-region::-webkit-scrollbar,
 html .card-region .blackboard-region .writable-region::-webkit-scrollbar {

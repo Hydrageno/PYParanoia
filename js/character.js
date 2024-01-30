@@ -71,37 +71,37 @@ document.addEventListener("DOMContentLoaded", function(){
         .then(data => {
             // 填写拼音
             var pinyin = document.querySelector('.pinyin-region');
-            pinyin.innerHTML = `拼音：${data['pinyin']}`;
+            pinyin.innerHTML = `<span class="prefix">拼音：</span>${data['pinyin']}`;
             // 填写笔画
             var stroke_status = data['stroke_status']
             if(stroke_status == "FOUND")
             {
                 var stroke = document.querySelector('.stroke-region');
-                stroke.innerHTML = `笔画：${data['stroke_info']}`;
+                stroke.innerHTML = `<span class="prefix">笔画：</span>${data['stroke_info']}`;
             }
             // 填写词语及其解释
             var wtp_status = data['wtp_status']
             if(wtp_status == "FOUND")
             {
                 var phrase = document.querySelector('.phrase-region');
-                phrase.innerHTML = `词语：${data['wtp_info']['word']}`;
+                phrase.innerHTML = `<span class="prefix">词语：</span>${data['wtp_info']['word']}`;
                 var phrase_pinyin = document.querySelector('.phrase-pinyin-region');
-                phrase_pinyin.innerHTML = `拼音：${data['wtp_info']['word_pinyin']}`;
+                phrase_pinyin.innerHTML = `<span class="prefix">词语拼音：</span>${data['wtp_info']['word_pinyin']}`;
                 var explanation = document.querySelector('.phrase-explanation-region');
-                explanation.innerHTML = `词语解释：${data['wtp_info']['text']}`;
+                explanation.innerHTML = `<span class="prefix">词语解释：</span>${data['wtp_info']['text']}`;
                 var explanation_pinyin = document.querySelector('.phrase-explanation-pinyin-region');
-                explanation_pinyin.innerHTML = `词语拼音：${data['wtp_info']['text_pinyin']}`;
+                explanation_pinyin.innerHTML = `<span class="prefix">解释拼音：</span>${data['wtp_info']['text_pinyin']}`;
             }
             // 填写成语及其解释
             var idiom_status = data['idiom_status']
             if(idiom_status == "FOUND")
             {
                 var idiom = document.querySelector('.idiom-region');
-                idiom.innerHTML = `成语：${data['idiom_info']['idiom']}`;
+                idiom.innerHTML = `<span class="prefix">成语：</span>${data['idiom_info']['idiom']}`;
                 var idiom_pinyin = document.querySelector('.idiom-pinyin-region');
-                idiom_pinyin.innerHTML = `拼音：${data['idiom_info']['idiom_pinyin']}`;
+                idiom_pinyin.innerHTML = `<span class="prefix">成语拼音：</span>${data['idiom_info']['idiom_pinyin']}`;
                 var explanation = document.querySelector('.idiom-explanation-region');
-                explanation.innerHTML = `成语解释：${data['idiom_info']['explanation']}`;
+                explanation.innerHTML = `<span class="prefix">成语解释：</span>${data['idiom_info']['explanation']}`;
                 // var explanation_pinyin = document.querySelector('.phrase-explanation-pinyin-region');
                 // explanation_pinyin.innerHTML = `词语拼音：${data['wtp_info']['text_pinyin']}`;
             }

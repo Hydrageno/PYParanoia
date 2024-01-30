@@ -76,7 +76,7 @@ html .search-region .search-bar {
   margin-right: 0;
   border-radius: 0.5rem 0px 0px 0.5rem;
   border: none;
-  color: darkgray;
+  color: #000000;
   font-size: 2.15rem;
   font-family: '仿宋';
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
