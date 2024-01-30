@@ -16,12 +16,25 @@ document.addEventListener("DOMContentLoaded", function(){
                 <br>
             `
             wordbookContainer.appendChild(contentTemplate);
-            console.log(data['gradewordbook'])
+            var gradeperiodrank_dict = {
+                1: "一年级上册",
+                2: "一年级下册",
+                3: "二年级上册",
+                4: "二年级下册",
+                5: "三年级上册",
+                6: "三年级下册",
+                7: "四年级上册",
+                8: "四年级下册",
+                9: "五年级上册",
+                10: "五年级下册",
+                11: "六年级上册",
+                12: "六年级下册",
+            }
             for (const [key, value] of Object.entries(data['gradewordbook'])) {
                 var contentTemplate = document.createElement('div');
                 contentTemplate.classList.add('content-template');
                 contentTemplate.innerHTML = `
-                    <div class="template-theme">${key}</div>
+                    <div class="template-theme">${gradeperiodrank_dict[key]}：</div>
                     <div class="template-content">${value}</div>
                     <br>
                `

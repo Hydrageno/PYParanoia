@@ -169,7 +169,7 @@ def search_gradewordbook_composed():
         compose = ''
         for i in range(0, len(gradewordbook_info['newwords'])):
             compose = compose + gradewordbook_info['newwords'][i] + '    '# +'(' +  gradewordbook_info['pinyin'][i] + ') '
-        compose_dict[j] = compose
+        compose_dict[j + 1] = compose
     return ("FOUND", compose_dict)
         
 
