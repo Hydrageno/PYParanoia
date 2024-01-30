@@ -68,10 +68,23 @@ def analyze_gradewordbook_question_coverage(grade, period, all_mode):
         return ("FOUND", coverage_list[user_gradeperiodrank - 1])
     else:
         return ("FOUND", coverage_list)
+    
 
+def analyze_ffphrase_category():
+    '''
+    功能：统计固定格式词语种类数量
+    '''
+    with open('./database/data/fixedformat_phrases_info.json', 'r', encoding='utf-8') as file:
+        ffp_json = json.load(file)
+    ffp_category = set()
+    for ffp_info in ffp_json:
+        ffp_category.add(ffp_info['format'])
+    return ffp_category
 
 
 if __name__ == "__main__":
-    switch_boom = 1
+    switch_boom = 2
     if switch_boom == 1:
         init_gradewordbook_questions_progress()
+    elif switch_boom == 2:
+        print(analyze_ffphrase_category())

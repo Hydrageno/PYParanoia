@@ -24,29 +24,22 @@
             <!--该区域涵盖搜索-->
             <img src="../resource/phrase/search_input_left.png" class="left-search-decoration" alt="标志">
             <input type="text" class="search-bar" id="searchBar" placeholder="如输入'AABB'以开始检索">
-            <button type="button" class="search-button" onclick="searchInfo()">搜索</button>
+            <button type="button" class="search-button" onclick="searchPhrase()">搜索</button>
             <img src="../resource/phrase/search_input_right.png" class="right-search-decoration" alt="标志">
         </div>
 		<div class="function-region">
-			<button type="button" class="back-home-button" title="主页">返回主页</button>
-			<button type="button" class="redirect-wordbook-button" title="看生词">查看生词</button>
-            <button type="button" class="redirect-examine-button" title="练题目">生词练习</button>
+			<button type="button" class="back-home-button" title="主页" onclick="backHome()">返回主页</button>
+			<button type="button" class="redirect-wordbook-button" title="看生字" onclick="redirectWordbook()">查看生字</button>
+            <button type="button" class="redirect-examine-button" title="练题目" onclick="redirectWordbookExamine()">生字练习</button>
 		</div>
         <div class="card-region">
             <div class="blackboard-region">
 				<div class="writable-region">
-					<div class="pinyin-region">拼音：</div>
-					<div class="stroke-region">笔画：</div>
-					<div class="phrase-region">词语：</div>
-					<div class="phrase-explanation-region">词语解释：“国”本义指有疆界的地区，引申指某一地区，区域。又引申指分封的诸侯国。</div>
-					<div class="idiom-region"></div>
-					<div class="idiom-explanation-region"></div>
 				</div>
 			</div>
             <div class="illustration"></div>
         </div>
     </div>
-		<script type="text/javascript">
-		</script>
+		<script type="text/javascript" src="../js/phrase.js"></script>
 </body>
 </html>

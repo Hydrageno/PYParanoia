@@ -190,6 +190,10 @@ html .card-region .blackboard-region .writable-region div {
   font-family: '楷体';
   color: #fafafa;
 }
+body .card-region .blackboard-region .writable-region div .prefix,
+html .card-region .blackboard-region .writable-region div .prefix {
+  color: rgba(255, 55, 0, 0.9);
+}
 body .card-region .blackboard-region .writable-region::-webkit-scrollbar,
 html .card-region .blackboard-region .writable-region::-webkit-scrollbar {
   display: none;
