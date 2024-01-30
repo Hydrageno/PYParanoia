@@ -65,15 +65,8 @@ html .function-region .right-function-decoration {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90%;
-  width: 12vh;
-}
-body .function-region span,
-html .function-region span {
-  font-size: 1.5rem;
-  font-family: '仿宋';
-  color: black;
-  cursor: help;
+  height: 100%;
+  width: 15vh;
 }
 body .function-region button,
 html .function-region button {
@@ -89,7 +82,7 @@ html .function-region button {
   background-color: #807b75;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.2);
   color: #2d2d2d;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   font-family: '仿宋';
   outline: #e9e0d2 solid 0.1rem;
@@ -103,71 +96,74 @@ html .function-region button:hover {
 body .function-region .function-container,
 html .function-region .function-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  width: 100vh;
+  height: 100%;
+  font-size: 2rem;
+  font-family: '仿宋';
+  font-weight: bold;
+  color: black;
+  cursor: help;
 }
 body .function-region .function-container .gradewordbook-container,
 html .function-region .function-container .gradewordbook-container {
-  height: 5vh;
   width: 50vh;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-body .function-region .function-container .gradewordbook-container .back-home-button,
-html .function-region .function-container .gradewordbook-container .back-home-button {
-  width: 7rem;
-  margin-left: 0rem;
-  margin-right: 0rem;
 }
 body .function-region .function-container .gradewordbook-container .underline-decoration,
 html .function-region .function-container .gradewordbook-container .underline-decoration {
   color: red;
   text-decoration: underline;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
 }
 body .function-region .function-container .gradewordbook-container .option,
 html .function-region .function-container .gradewordbook-container .option {
   box-shadow: 0 0 0.05rem #ccc;
   border-radius: 0.5rem;
   border: 0.05rem solid #cccccc;
+  height: auto;
+  padding: 0;
   overflow: hidden;
+  margin-left: 0.15rem;
+  margin-right: 0.15rem;
 }
 body .function-region .function-container .gradewordbook-container .option select,
 html .function-region .function-container .gradewordbook-container .option select {
-  background-image: url("../resource/examine/character_button.png");
+  background-image: url("../resource/examine/select_background.png");
+  background-color: rgba(255, 255, 255, 0.5);
+  background-size: cover;
   border: none;
   outline: none;
-  height: 1.75rem;
-  line-height: 1.75rem;
+  line-height: 2.65rem;
   width: 4rem;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   font-family: '仿宋';
-  font-size: 1.15rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #2d2d2d;
   text-align: center;
-  filter: opacity(90%);
+  padding: 0;
 }
 body .function-region .function-container .gradewordbook-container .fetch-gradewordbook-questions-button,
 html .function-region .function-container .gradewordbook-container .fetch-gradewordbook-questions-button {
   width: 5rem;
-  margin-left: 0rem;
+  height: 2.65rem;
+  margin-left: 0.15rem;
   margin-right: 0rem;
 }
 body .function-region .function-container .wordbook-container,
 html .function-region .function-container .wordbook-container {
-  height: 5vh;
   width: 50vh;
+  height: 100%;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
-}
-body .function-region .function-container .wordbook-container .hidden-text,
-html .function-region .function-container .wordbook-container .hidden-text {
-  visibility: hidden;
 }
 body .function-region .function-container .wordbook-container .underline-decoration,
 html .function-region .function-container .wordbook-container .underline-decoration {
@@ -177,8 +173,20 @@ html .function-region .function-container .wordbook-container .underline-decorat
 body .function-region .function-container .wordbook-container .fetch-wordbook-questions-button,
 html .function-region .function-container .wordbook-container .fetch-wordbook-questions-button {
   width: 5rem;
-  margin-left: 0rem;
+  height: 2.65rem;
+  margin-left: 0.15rem;
   margin-right: 0rem;
+}
+body .function-region .function-container .gradewordbook-container:hover,
+html .function-region .function-container .gradewordbook-container:hover,
+body .function-region .function-container .wordbook-container:hover,
+html .function-region .function-container .wordbook-container:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  /* 悬停时增加更明显的阴影 */
+  border-radius: 0.5rem;
+  border-style: solid;
+  border-color: #dedede;
+  border-width: 0.05rem;
 }
 body .card-region,
 html .card-region {
@@ -224,6 +232,7 @@ html .card-region div.questions-canvas .questions-container .question-reply {
   /* 底部边框样式 */
   background-color: transparent;
   font-family: '仿宋';
+  text-align: center;
 }
 body .card-region div.questions-canvas .questions-container .question-reply:focus,
 html .card-region div.questions-canvas .questions-container .question-reply:focus {

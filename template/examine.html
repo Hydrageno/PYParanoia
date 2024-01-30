@@ -24,8 +24,7 @@
             <img src="../resource/examine/inc_dragon_left.png" class="left-function-decoration" alt="标志">
             <div class="function-container">
                 <div class="gradewordbook-container">
-                    <button type="button" class="back-home-button" title="主页" onclick="backHome()">返回主页</button>
-                    <span class="examine-decoration">&nbsp;:选择</span>
+                    <span class="examine-decoration">选择</span>
                     <div class="option" id="gradePeriodRank">
                         <select title="年级选择" id="gradePeriodRankSelect">
                             <option value="一上">一上</option>
@@ -42,7 +41,7 @@
                             <option value="六下">六下</option>
                         </select>
                     </div>
-                    <span class="examine-decoration underline-decoration">搭配</span>
+                    '<span class="examine-decoration underline-decoration">搭配</span>'
                     <div class="option" id="hyperMode">
                         <select title="模式选择" id="hyperModeSelect">
                             <option value="False">简单</option>
@@ -53,8 +52,7 @@
                     <button type="button" class="fetch-gradewordbook-questions-button" title="年级生词本练习" onclick="fetchGradewordbookQuestions()">答题</button>
                 </div>
                 <div class="wordbook-container">
-                    <span class="hidden-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                    <span class="examine-decoration">或选择以'</span>
+                    <span class="examine-decoration">选择以'</span>
                     <span class="exmaine-decoration underline-decoration">生词本</span>
                     <span class="examine-decoration">'为基础</span>
                     <button type="button" class="fetch-wordbook-questions-button" title="普通生词本练习" onclick="fetchWordbookQuestions()">答题</button>
@@ -67,6 +65,7 @@
                 <div class="questions-container"></div>
             </div>
             <div class="questions-interaction">
+                <button type="button" class="back-home-button" title="主页" onclick="backHome()">返回主页</button>
                 <button type="button" class="submit-answers" title="提交">提交</button>
                 <button type="button" class="download-analysis" title="下载分析结果">分析结果</button>
             </div>
