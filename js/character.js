@@ -1,3 +1,7 @@
+/**
+ * AUTHOR NAME: Tsung Yilee
+ * AUTHOR EMAIL: свит_дрим@yandex.com
+ */
 document.addEventListener("DOMContentLoaded", function(){
     /**
      * 绘画大字，即左下角的米字格中

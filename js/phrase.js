@@ -1,3 +1,7 @@
+/**
+ * AUTHOR NAME: Tsung Yilee
+ * AUTHOR EMAIL: свит_дрим@yandex.com
+ */
 function searchPhrase(){
     /**
      * 功能：搜索给定固定格式词语

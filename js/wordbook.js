@@ -1,3 +1,7 @@
+/**
+ * AUTHOR NAME: Tsung Yilee
+ * AUTHOR EMAIL: свит_дрим@yandex.com
+ */
 document.addEventListener("DOMContentLoaded", function(){
     /**
      * 请求生词内容，将生词内容显示在卷轴上

@@ -1,3 +1,7 @@
+/**
+ * AUTHOR NAME: Tsung Yilee
+ * AUTHOR EMAIL: свит_дрим@yandex.com
+ */
 function setTargetCharacter(){
     /**
      * 功能：设置后端目标关键字
