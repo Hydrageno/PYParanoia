@@ -135,15 +135,47 @@ def search_wordbook_composed():
     # 将所有的结果拼成一个长串
     long_result = ''
     for wordbook_info in wordbook_json:
-        long_result += wordbook_info['char'] + ':' + wordbook_info['pinyin'] + ' '
+        long_result += wordbook_info['char'] + '(' + wordbook_info['pinyin'] + ') '
     if long_result == '':
-        return ("NOINFO", "NOINFO")
+        return ("NOINFO", "你尚未添加任何生词哦~")
     else:
         return ("FOUND", long_result)
+    
+
+def search_gradewordbook_composed():
+    '''
+    功能：将不同年级不同时期的生词拼凑返回
+    '''
+    with open('./database/data/gradewordbook.json', 'r', encoding='utf-8') as file:
+        gradewordbook_json = json.load(file)
+    compose_dict = {}
+    # 将所有不同年级的结果拼成一个超级长串！
+    gradeperiodrank_dict = {
+        "一上": 1,
+        "一下": 2,
+        "二上": 3,
+        "二下": 4,
+        "三上": 5,
+        "三下": 6,
+        "四上": 7,
+        "四下": 8,
+        "五上": 9,
+        "五下": 10,
+        "六上": 11,
+        "六下": 12,
+    }
+    for j in range(0, len(gradewordbook_json)):
+        gradewordbook_info = gradewordbook_json[j]
+        compose = ''
+        for i in range(0, len(gradewordbook_info['newwords'])):
+            compose = compose + gradewordbook_info['newwords'][i] + '    '# +'(' +  gradewordbook_info['pinyin'][i] + ') '
+        compose_dict[j] = compose
+    return ("FOUND", compose_dict)
+        
 
 
 if __name__ == "__main__":
-    switch_boom = 5
+    switch_boom = 6
     if switch_boom == 1:
         (cue, result) = search_fixedformat_phrase("AAbb")
         if cue == "FOUND":
@@ -163,4 +195,7 @@ if __name__ == "__main__":
         print((random_word, random_word_pinyin, random_text, random_text_pinyin))
     elif switch_boom == 5:
         (cue, long_result) = search_wordbook_composed()
+        print(long_result)
+    elif switch_boom == 6:
+        (cue, long_result) = search_gradewordbook_composed()
         print(long_result)

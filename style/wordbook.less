@@ -3,7 +3,7 @@ body, html {
     padding: 0;
     height: 100vh;
     //设置背景图片
-    background-image: url("../resource/wordbook_background.png");
+    background-image: url("../resource/wordbook/wordbook_background.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body, html {
             width: 65rem;
             height: 50%;
             //设置背景图片
-            background-image: url("../resource/inc_canvas_rescale.png");
+            background-image: url("../resource/wordbook/inc_canvas_rescale.png");
             background-size: contain;
             background-position: center;
             background-repeat: no-repeat; 
@@ -59,7 +59,7 @@ body, html {
             width: auto;
         }
         button {
-            background-image: url("../resource/character_button.png");
+            background-image: url("../resource/wordbook/character_button.png");
             width: 10rem;
             padding: 0.5rem; /* 按钮内边距 */
             cursor: pointer; /* 鼠标悬停样式 */
@@ -91,7 +91,7 @@ body, html {
             width: 119vh;
             height: 60vh;
             //设置背景图片
-            background-image: url("../resource/wordbook_canvas.png");
+            background-image: url("../resource/wordbook/wordbook_canvas.png");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -100,14 +100,25 @@ body, html {
             justify-content: center;
             align-items: center;
             .wordbook-container {
-                //600 * 290 vh
+                //600 * 290 px
                 width: 93vh;
                 height: 45vh;
                 display: flex;
                 flex-direction: column;
                 overflow-y: scroll;
-                font-size: 2.15rem;
-                font-family: '楷体';
+                .content-template {
+                    font-size: 2.15rem;
+                    font-family: '楷体';
+                    line-height: 2.50rem;
+                    .template-theme {
+                        font-size: 2.35rem;
+                    }
+                    .template-content {
+                        text-align: justify;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+                }
             }
             .wordbook-container::-webkit-scrollbar {
                 display: none;

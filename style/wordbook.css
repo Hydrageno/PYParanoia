@@ -120,8 +120,22 @@ html .card-region .wordbook-canvas .wordbook-container {
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+}
+body .card-region .wordbook-canvas .wordbook-container .content-template,
+html .card-region .wordbook-canvas .wordbook-container .content-template {
   font-size: 2.15rem;
   font-family: '楷体';
+  line-height: 2.5rem;
+}
+body .card-region .wordbook-canvas .wordbook-container .content-template .template-theme,
+html .card-region .wordbook-canvas .wordbook-container .content-template .template-theme {
+  font-size: 2.35rem;
+}
+body .card-region .wordbook-canvas .wordbook-container .content-template .template-content,
+html .card-region .wordbook-canvas .wordbook-container .content-template .template-content {
+  text-align: justify;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 body .card-region .wordbook-canvas .wordbook-container::-webkit-scrollbar,
 html .card-region .wordbook-canvas .wordbook-container::-webkit-scrollbar {
