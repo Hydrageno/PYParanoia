@@ -3,6 +3,10 @@
 # AUTHOR EMAIL: свит_дрим@yandex.com
 import json
 from tqdm import trange
+import wordcloud
+import numpy
+from PIL import Image
+import random
 
 
 def init_gradewordbook_questions_progress():
@@ -82,9 +86,34 @@ def analyze_ffphrase_category():
     return ffp_category
 
 
+def paint_wordcloud():
+    '''
+    功能：生成词云，但是推荐在年级生词本模式下使用，因为普通生词本可分析数据过少
+    '''
+    with open('./database/states/gradewordbook_char_distribution.json', 'r', encoding='utf-8') as file:
+        char_distribution_json = json.load(file)
+    word_count = 0
+    composed = ''
+    for char_distribution_info in char_distribution_json:
+        composed = composed + char_distribution_info['char'] + ','
+        word_count += 1
+    while word_count < 100:
+        random_one = random.choice(char_distribution_json)
+        random_two = random.choice(char_distribution_json)
+        composed = composed + random_one['char'] + random_two['char'] + ','
+        word_count += 1
+    img = Image.open('./resource/figure/wordcloud_background.png')
+    mask = numpy.array(img)
+    wc = wordcloud.WordCloud(font_path='./resource/figure/字魂白鸽天行体.ttf', collocations=True, mask=mask, width=852, height=640, background_color='white', min_font_size=32)
+    wc.generate(composed)
+    wc.to_file('result.png')
+
+
 if __name__ == "__main__":
-    switch_boom = 2
+    switch_boom = 3
     if switch_boom == 1:
         init_gradewordbook_questions_progress()
     elif switch_boom == 2:
         print(analyze_ffphrase_category())
+    elif switch_boom == 3:
+        paint_wordcloud()
