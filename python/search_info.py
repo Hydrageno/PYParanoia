@@ -5,6 +5,23 @@ import json
 import random
 
 
+'''
+涉及函数
+    search_fixedformat_phrase
+        本质：用户给定格式'AABB'等，查找对应固定格式的对应词语
+    search_idiom
+        本质：用户给定一个字，从成语库中找出包含该字的成语
+    search_stroke
+        本质：用户给定一个字，找出笔画
+    search_wordtextpair
+        本质：用户给定一个字，找出该字的词语、解释及其对应的拼音
+    search_wordbook_composed
+        本质：将所有积累的所有生字，即生字本
+    search_gradewordbook_composed
+        本质： 将不同年级不同时期的生词拼凑返回
+'''
+
+
 def search_fixedformat_phrase(given_fixedformat):
     '''
     功能：查找对应固定格式的对应词语
