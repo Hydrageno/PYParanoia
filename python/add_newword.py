@@ -7,6 +7,15 @@ from pypinyin import pinyin
 import os
 from datetime import datetime
 
+'''
+涉及函数：
+    add_newword_to_gradewordbook
+        本质：处理文件，一次性生成各个年级的生词
+    add_newword_to_wordbook：
+        本质：将生词添加到生词本中
+
+'''
+
 
 def add_newword_to_gradewordbook():
     '''
@@ -119,4 +128,8 @@ def add_newword_to_wordbook(given_char):
         json.dump(sorted_wordbook_json, file, ensure_ascii=False, indent=2)
 
 if __name__ == "__main__":
-    add_newword_to_wordbook()
+    switch_boom = 1
+    if switch_boom == 1:
+        add_newword_to_gradewordbook()
+    elif switch_boom == 2:
+        add_newword_to_wordbook('心')
