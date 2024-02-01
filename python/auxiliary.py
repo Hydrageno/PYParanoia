@@ -4,6 +4,21 @@
 import json
 import pyttsx3
 
+'''
+涉及函数：
+    check_wordbook_empty
+        本质：检查生词本是否空，辅助抽题功能
+    clear_gradewordbook_questions_bingolabel
+        本质：根据需求清空不同年级不同时期题目的bingo标志，初始化使用
+    reindent_json
+        本质：规范格式化json文件
+    read_text_by_machine
+        本质：让电脑读出拼音
+    init_database
+        本质：初始化项目数据，涵盖生词本
+    regularize_questions
+        本质：规范化题目描述文本信息
+'''
 
 def check_wordbook_empty():
     '''
@@ -85,6 +100,11 @@ def init_database():
     # 初始化生词本
     with open('tmp.json', 'w', encoding='utf-8') as file:
         json.dump([], file, ensure_ascii=False, indent=2)
+    # 初始化所有年级标志
+    clear_gradewordbook_questions_bingolabel('六', '下', True)
+    # 初始化年级所有题目缓存题数
+    from figure_analysis import init_gradewordbook_questions_progress
+    init_gradewordbook_questions_progress()
 
 
 def regularize_questions(filename):
@@ -115,8 +135,16 @@ def regularize_questions(filename):
 
 
 if __name__ == "__main__":
-    switch_boom = 2
+    switch_boom = 5
     if switch_boom == 1:
         init_database()
     elif switch_boom == 2:
+        regularize_questions('gradewordbook')
+    elif switch_boom == 3:
+        reindent_json('source.json', 'target.json')
+    elif switch_boom == 4:
+        read_text_by_machine('你好')
+    elif switch_boom == 5:
+        init_database()
+    elif switch_boom == 6:
         regularize_questions('gradewordbook')
