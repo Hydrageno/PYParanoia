@@ -227,5 +227,19 @@ def download_figure():
     )
 
 
+@app.route('/machine_read/<content>')
+def machine_read(content):
+    '''
+    功能：通过驱动ttx引擎
+    '''
+    from python.auxiliary import read_text_by_machine
+    read_text_by_machine(content)
+    return jsonify(
+        {
+            "message": "ok"
+        }
+    )
+
+
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port='5000')

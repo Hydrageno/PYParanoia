@@ -183,6 +183,24 @@ body, html {
                         -webkit-user-select: none;
                         user-select: none;
                     }
+                    .hidden-content{
+                        display: none;
+                    }
+                    .machine-read-button {
+                        box-sizing: border-box;
+                        background-image: url("../resource/character/character_button.png");
+                        background-size: contain;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        font-family: '楷体';
+                        font-size: 1.50rem;
+                        border-radius: 1.00rem;
+                        border-width: 0.1rem;
+                    }
+                    .machine-read-button:hover {
+                        cursor: pointer;
+                        box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6); /* 悬停时增加更明显的阴影 */
+                    }
                 } 
             }
             .writable-region::-webkit-scrollbar{

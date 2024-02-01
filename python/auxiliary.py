@@ -3,6 +3,7 @@
 # AUTHOR EMAIL: свит_дрим@yandex.com
 import json
 import pyttsx3
+import time
 
 '''
 涉及函数：
@@ -85,7 +86,7 @@ def read_text_by_machine(text):
     '''
     engine = pyttsx3.init()
     # 设置语速
-    engine.setProperty('rate', 100)
+    engine.setProperty('rate', 120)
     # 将文本转换为语音
     engine.say(text)
     # 等待语音输出完成

@@ -73,9 +73,13 @@ document.addEventListener("DOMContentLoaded", function(){
         fetch('http://127.0.0.1:5000/search_character_info/' + givenChar)
         .then(response => response.json())
         .then(data => {
-            // 填写拼音
+            // 填写拼音以及读取拼音
             var pinyin = document.querySelector('.pinyin-region');
-            pinyin.innerHTML = `<span class="prefix">拼音：</span>${data['pinyin']}`;
+            pinyin.innerHTML = 
+            `   <span class="prefix">拼音：</span>
+                ${data['pinyin']}
+                <span class="hidden-content">${urlParams.get('tc')}</span>
+                <button type="button" class="machine-read-button" title="念出来" onclick="machineRead(event)">念</button>`;
             // 填写笔画
             var stroke_status = data['stroke_status']
             if(stroke_status == "FOUND")
@@ -90,11 +94,19 @@ document.addEventListener("DOMContentLoaded", function(){
                 var phrase = document.querySelector('.phrase-region');
                 phrase.innerHTML = `<span class="prefix">词语：</span>${data['wtp_info']['word']}`;
                 var phrase_pinyin = document.querySelector('.phrase-pinyin-region');
-                phrase_pinyin.innerHTML = `<span class="prefix">词语拼音：</span>${data['wtp_info']['word_pinyin']}`;
+                phrase_pinyin.innerHTML =
+                 `  <span class="prefix">词语拼音：</span>
+                    ${data['wtp_info']['word_pinyin']}
+                    <span class="hidden-content">${data['wtp_info']['word']}</span>
+                    <button type="button" class="machine-read-button" title="念出来" onclick="machineRead(event)">念</button>`;
                 var explanation = document.querySelector('.phrase-explanation-region');
                 explanation.innerHTML = `<span class="prefix">词语解释：</span>${data['wtp_info']['text']}`;
                 var explanation_pinyin = document.querySelector('.phrase-explanation-pinyin-region');
-                explanation_pinyin.innerHTML = `<span class="prefix">解释拼音：</span>${data['wtp_info']['text_pinyin']}`;
+                explanation_pinyin.innerHTML = 
+                `   <span class="prefix">解释拼音：</span>
+                    ${data['wtp_info']['text_pinyin']}
+                    <span class="hidden-content">${data['wtp_info']['text']}</span>
+                    <button type="button" class="machine-read-button" title="念出来" onclick="machineRead(event)">念</button>`;
             }
             // 填写成语及其解释
             var idiom_status = data['idiom_status']
@@ -103,7 +115,11 @@ document.addEventListener("DOMContentLoaded", function(){
                 var idiom = document.querySelector('.idiom-region');
                 idiom.innerHTML = `<span class="prefix">成语：</span>${data['idiom_info']['idiom']}`;
                 var idiom_pinyin = document.querySelector('.idiom-pinyin-region');
-                idiom_pinyin.innerHTML = `<span class="prefix">成语拼音：</span>${data['idiom_info']['idiom_pinyin']}`;
+                idiom_pinyin.innerHTML = 
+                `   <span class="prefix">成语拼音：</span>
+                    ${data['idiom_info']['idiom_pinyin']}
+                    <span class="hidden-content">${data['idiom_info']['idiom']}</span>
+                    <button type="button" class="machine-read-button" title="念出来" onclick="machineRead(event)">念</button>`;
                 var explanation = document.querySelector('.idiom-explanation-region');
                 explanation.innerHTML = `<span class="prefix">成语解释：</span>${data['idiom_info']['explanation']}`;
                 // var explanation_pinyin = document.querySelector('.phrase-explanation-pinyin-region');
@@ -175,4 +191,24 @@ function redirectWordbook()
      * 功能：前往生词本页面
      */
     window.location.href = './wordbook.html';
+}
+
+var backEndSpeaked = false; // 阻止一次性过多访问，导致崩溃
+function machineRead(event)
+{
+    /**
+     * 功能：念出来！
+     */
+    if(backEndSpeaked == true)return;
+    backEndSpeaked = true;
+    var button = event.target;
+    var previousSibling = button.previousElementSibling; // 使用 previousElementSibling 获取前一个兄弟元素节点
+    previousSibling.style.display = 'inline'; // 将前一个兄弟元素节点显示出来
+    fetch('http://127.0.0.1:5000/machine_read/' + previousSibling.textContent)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data['message']);
+        backEndSpeaked = false; //直至后端念完后，才允许下一个点击
+    })
+    previousSibling.style.display = 'none'; // 恢复前一个兄弟元素节点的隐藏状态
 }
