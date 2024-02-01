@@ -208,6 +208,28 @@ body .card-region .blackboard-region .writable-region div .prefix,
 html .card-region .blackboard-region .writable-region div .prefix {
   color: rgba(255, 55, 0, 0.9);
 }
+body .card-region .blackboard-region .writable-region div .hidden-content,
+html .card-region .blackboard-region .writable-region div .hidden-content {
+  display: none;
+}
+body .card-region .blackboard-region .writable-region div .machine-read-button,
+html .card-region .blackboard-region .writable-region div .machine-read-button {
+  box-sizing: border-box;
+  background-image: url("../resource/character/character_button.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: '楷体';
+  font-size: 1.5rem;
+  border-radius: 1rem;
+  border-width: 0.1rem;
+}
+body .card-region .blackboard-region .writable-region div .machine-read-button:hover,
+html .card-region .blackboard-region .writable-region div .machine-read-button:hover {
+  cursor: pointer;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.6);
+  /* 悬停时增加更明显的阴影 */
+}
 body .card-region .blackboard-region .writable-region::-webkit-scrollbar,
 html .card-region .blackboard-region .writable-region::-webkit-scrollbar {
   display: none;
