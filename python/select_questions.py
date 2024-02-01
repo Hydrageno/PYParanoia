@@ -5,6 +5,15 @@ import json
 import random
 
 
+'''
+涉及函数
+    select_questions_by_gradewordbook
+        本质：从年级题库中直接抽一定数量题目，然后再random数量的题目，会依据用户的年级+时期+模式选择
+    select_questions_by_wordbook
+        本质：从生字题库中直接抽固定数量题目，然后再random数量的题目
+'''
+
+
 def select_questions_by_gradewordbook(grade, period, hybrid_mode:False):
     '''
     功能：从生词题库中直接抽一定数量题目，然后再random数量的题目
