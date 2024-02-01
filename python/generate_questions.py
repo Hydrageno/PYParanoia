@@ -6,6 +6,15 @@ from pypinyin import pinyin, Style
 from tqdm import trange
 
 
+'''
+涉及函数
+    generate_questions_by_gradewordbook
+        本质：旨在生词不同年级的题目，考虑到年级是固定的，直接从六下生成所有的即可
+    generate_questions_by_wordbook
+        本质：旨在根据生字本生成对应的题目
+'''
+
+
 def generate_questions_by_gradewordbook(grade, period):
     '''
     功能：生成所有年级的题目
@@ -183,5 +192,8 @@ def generate_questions_by_wordbook(history_mode):
         json.dump(questions, file, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
-    generate_questions_by_wordbook()
-    generate_questions_by_gradewordbook("六", "下")
+    switch_boom = 1
+    if switch_boom == 1:
+        generate_questions_by_wordbook()
+    elif switch_boom == 2:
+        generate_questions_by_gradewordbook("六", "下")
