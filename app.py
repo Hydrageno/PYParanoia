@@ -205,5 +205,27 @@ def process_uanswer():
     )
 
 
+@app.route('/download_figure')
+def download_figure():
+    '''
+    功能：下载分析数据
+    '''
+    global cached_which
+    if cached_which == 'gradewordbook':
+        global cached_grade
+        global cached_period
+        global cached_hybrid_mode
+        from python.pack_pdf import pack_pdf_by_gradewordbook
+        pack_pdf_by_gradewordbook(cached_grade, cached_period, cached_hybrid_mode)
+    else:
+        from python.pack_pdf import pack_pdf_by_wordbook
+        pack_pdf_by_wordbook()
+    return jsonify(
+        {
+            "message": "ok"
+        }
+    )
+
+
 if __name__ == "__main__":
     app.run(host='127.0.0.1', port='5000')

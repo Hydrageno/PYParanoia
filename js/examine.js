@@ -150,3 +150,18 @@ function finishQuestions(){
         downloadAnalysisButton.style.cursor = 'pointer';
     })
 }
+
+
+function downloadAnalysis(){
+    fetch('http://127.0.0.1:5000/download_figure')
+    .then(response => response.json())
+    .then(data => {
+        var anchor = document.createElement('a');
+        anchor.href = '../resource/figure/测试情况.pdf';
+        anchor.download = '测试情况.pdf'
+        anchor.style.display = 'none';
+        document.body.appendChild(anchor);
+        anchor.click();
+        document.body.removeChild(anchor);
+    })
+}
