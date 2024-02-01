@@ -2,6 +2,9 @@ import os
 
 
 if __name__ == "__main__":
+    '''
+    用户运行init.bat，init.bat调用init_bat.py，init_bat.py获取主文件的绝对路径，并使用msedge打开
+    '''
     # 获取当前脚本所在的目录
     current_directory = os.path.dirname(__file__)
     # 指定文件的相对路径
