@@ -5,6 +5,15 @@ import json
 import numpy as np
 
 
+'''
+涉及函数
+    process_answer_by_gradewordbook
+        本质：处理前端返回的用户填写结果，年级生字本模式
+    process_answer_by_wordbook
+        本质：处理前端返回的用户填写结果，生字本模式
+'''
+
+
 def process_answer_by_gradewordbook(grade, period, hybrid_mode):
     '''
     功能：处理前端返回的用户填写结果
@@ -242,7 +251,11 @@ def process_answer_by_wordbook():
 
 
 if __name__ == "__main__":
-    process_answer_by_wordbook()
+    switch_boom = 1
+    if switch_boom == 1:
+        process_answer_by_wordbook()
+    elif switch_boom == 2:
+        process_answer_by_gradewordbook('一', '上', True)
 
 
 
