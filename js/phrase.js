@@ -26,6 +26,7 @@ function searchPhrase(){
         .then(response => response.json())
         .then(data => {
             var writableRegion = document.querySelector('.writable-region');
+            writableRegion.innerHTML = '';
             for(let i = 0; i < data['words'].length; i++){
                 var contentTemplate = document.createElement('div');
                 contentTemplate.classList.add('content-template');
