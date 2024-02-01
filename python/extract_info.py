@@ -6,6 +6,15 @@ from pypinyin import pinyin
 from tqdm import trange
 
 
+'''
+涉及函数
+    extract_wordtextpairs
+        本质：转换文件，将收集到的数据提取成规范格式
+    extract_fixedformat_phrases
+        本质：转换文件，将收集到的数据提取成规范格式
+'''
+
+
 def extract_wordtextpairs():
     '''
     从char_detail中提取词
@@ -132,5 +141,9 @@ def extract_fixedformat_phrases():
 
 
 if __name__ == "__main__":
-    extract_fixedformat_phrases()
+    switch_boom = 1
+    if switch_boom == 1:
+        extract_wordtextpairs()
+    elif switch_boom == 2:
+        extract_fixedformat_phrases()
 
