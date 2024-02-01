@@ -12,6 +12,19 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 
 
+'''
+涉及函数
+    paint_wordcloud
+        本质：绘画词云
+    paint_char_distribution
+        本质：绘制字的分布情况，不同字的权重，采用直方图展示
+    paint_question_gradeperiod_distribution
+        本质：年级生字本+混合模式，绘制题目的不同年级分布
+    paint_question_progress
+        本质：年级生字本+纯净模式，绘制当前题目当前时期的年级进度图
+'''
+
+
 def paint_wordcloud(which):
     '''
     功能：生成词云，但是推荐在年级生词本模式下使用，因为普通生词本可分析数据过少
@@ -35,7 +48,7 @@ def paint_wordcloud(which):
 
 def paint_char_distribution(which):
     '''
-    功能：绘制字的分布情况，不同字的权重，以及同一字内部的权重
+    功能：绘制字的分布情况，不同字的权重
     '''
     with open(f'./database/states/{which}_char_distribution.json', 'r', encoding='utf-8') as file:
         char_distribution_json = json.load(file)
