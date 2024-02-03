@@ -182,6 +182,7 @@ html .card-region div.phrase-card .card-content-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: scroll;
 }
 body .card-region div.character-card .card-content-container .card-content,
 html .card-region div.character-card .card-content-container .card-content,
@@ -207,8 +208,17 @@ body .card-region div.examine-card .card-content-container .card-content span.th
 html .card-region div.examine-card .card-content-container .card-content span.theme-show,
 body .card-region div.phrase-card .card-content-container .card-content span.theme-show,
 html .card-region div.phrase-card .card-content-container .card-content span.theme-show {
-  display: flex;
-  text-align: center;
+  text-align: justify;
+}
+body .card-region div.character-card .card-content-container::-webkit-scrollbar,
+html .card-region div.character-card .card-content-container::-webkit-scrollbar,
+body .card-region div.wordbook-card .card-content-container::-webkit-scrollbar,
+html .card-region div.wordbook-card .card-content-container::-webkit-scrollbar,
+body .card-region div.examine-card .card-content-container::-webkit-scrollbar,
+html .card-region div.examine-card .card-content-container::-webkit-scrollbar,
+body .card-region div.phrase-card .card-content-container::-webkit-scrollbar,
+html .card-region div.phrase-card .card-content-container::-webkit-scrollbar {
+  display: none;
 }
 body .card-region div.character-card:hover,
 html .card-region div.character-card:hover,

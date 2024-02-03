@@ -57,11 +57,14 @@ document.addEventListener("DOMContentLoaded", function(){
             .attr('height',String(size) + "vh");
         //汉字
         svg.append('text')
-            .attr('x',"4vh")
-            .attr('y',String(size/2+10) + "vh")
+            .attr('x',"50%")
+            .attr('y',"85%")
+            .style('text-anchor', "middle")
             .style('font-size', '20rem')
             .style('font-family', 'Kaiti')
             .attr('fill','black')
+            .attr('width',String(size) + "vh")
+            .attr('height',String(size) + "vh")
             .text(givenChar);
     }
 

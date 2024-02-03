@@ -103,7 +103,9 @@ body .function-region .function-container,
 html .function-region .function-container {
   display: flex;
   flex-direction: row;
-  width: 100vh;
+  align-items: center;
+  background-color: blue;
+  width: 120vh;
   height: 100%;
   font-size: 2rem;
   font-family: '仿宋';
@@ -113,7 +115,7 @@ html .function-region .function-container {
 }
 body .function-region .function-container .gradewordbook-container,
 html .function-region .function-container .gradewordbook-container {
-  width: 50vh;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -165,7 +167,7 @@ html .function-region .function-container .gradewordbook-container .fetch-gradew
 }
 body .function-region .function-container .wordbook-container,
 html .function-region .function-container .wordbook-container {
-  width: 50vh;
+  width: 50%;
   height: 100%;
   display: flex;
   align-items: center;

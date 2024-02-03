@@ -143,6 +143,7 @@ body, html {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    overflow-y: scroll;
                     .card-content {
                         width: 90%;
                         height: 100%;
@@ -152,10 +153,13 @@ body, html {
                         font-weight: bold;
                         line-height: 2.50rem;
                         span.theme-show {
-                            display: flex;
-                            text-align: center;
+                            text-align: justify;
                         }
                     }
+                }
+                .card-content-container::-webkit-scrollbar{
+                    //隐藏滚动条
+                    display: none;
                 }
             }
             div.character-card:hover, div.wordbook-card:hover, div.examine-card:hover, div.phrase-card:hover {
