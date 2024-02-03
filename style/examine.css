@@ -104,7 +104,6 @@ html .function-region .function-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  background-color: blue;
   width: 120vh;
   height: 100%;
   font-size: 2rem;
