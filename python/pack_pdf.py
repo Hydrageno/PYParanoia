@@ -137,6 +137,7 @@ def paint_question_progress(grade, period):
     plt.rcParams['font.sans-serif'] = ['SimHei']
     plt.figure(figsize=(4.8, 3))
     x_major_locator=MultipleLocator(20)
+    plt.scatter(picked_progress, right_progress, s=20)
     ax=plt.gca()
     ax.xaxis.set_major_locator(x_major_locator)
     plt.plot(picked_progress, right_progress)
@@ -228,4 +229,4 @@ if __name__ == "__main__":
     elif switch_boom == 3:
         pack_pdf_by_wordbook()
     elif switch_boom == 4:
-        pack_pdf_by_gradewordbook('四', '下', False) 
+        pack_pdf_by_gradewordbook('一', '上', False) 

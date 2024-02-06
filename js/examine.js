@@ -153,15 +153,19 @@ function finishQuestions(){
 
 
 function downloadAnalysis(){
-    fetch('http://127.0.0.1:5000/download_figure')
-    .then(response => response.json())
-    .then(data => {
+    fetch('http://127.0.0.1:5000/download_figure', {
+        responseType: 'blob'
+    })
+    .then(response => response.blob())
+    .then(blob => {
+        var url = window.URL.createObjectURL(blob);
         var anchor = document.createElement('a');
-        anchor.href = '../resource/figure/测试情况.pdf';
+        anchor.href = url;
         anchor.download = '测试情况.pdf'
         anchor.style.display = 'none';
         document.body.appendChild(anchor);
         anchor.click();
         document.body.removeChild(anchor);
+        window.URL.revokeObjectURL(url);
     })
 }

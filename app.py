@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 # AUTHOR NAME: Tsung YiLee
 # AUTHOR EMAIL: свит_дрим@yandex.com
-from flask import Flask, jsonify
+from flask import Flask, jsonify, send_file
 from flask import request
 from flask_cors import CORS
 from pypinyin import pinyin
@@ -220,10 +220,17 @@ def download_figure():
     else:
         from python.pack_pdf import pack_pdf_by_wordbook
         pack_pdf_by_wordbook()
-    return jsonify(
-        {
-            "message": "ok"
-        }
+    with open('./resource/figure/测试情况.pdf', 'rb') as file:
+        pdf_content = file.read()
+    import io
+    blob_data = io.BytesIO()
+    blob_data.write(pdf_content)
+    blob_data.seek(0)
+    return send_file(
+        blob_data,
+        mimetype='application/pdf',
+        as_attachment=True,
+        download_name='测试情况.pdf'
     )
 
 
