@@ -192,7 +192,7 @@ def generate_questions_by_wordbook(history_mode):
         json.dump(questions, file, indent=2, ensure_ascii=False)
 
 if __name__ == "__main__":
-    switch_boom = 1
+    switch_boom = 2
     if switch_boom == 1:
         generate_questions_by_wordbook()
     elif switch_boom == 2:

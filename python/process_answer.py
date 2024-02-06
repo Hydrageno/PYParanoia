@@ -144,7 +144,7 @@ def process_answer_by_gradewordbook(grade, period, hybrid_mode):
         with open('./database/states/gradewordbook_question_distribution.json', 'w', encoding='utf-8') as file:
             json.dump(sorted_question_distribution, file, indent=2, ensure_ascii=False)
     else:
-        # 混合模式，更新本年级本时期进度
+        # 纯净模式，更新本年级本时期进度
         with open('./database/states/gradewordbook_question_progress.json', 'r', encoding='utf-8') as file:
             gradewordbook_question_progress_json = json.load(file)
         for gradewordbook_question_progress_info in gradewordbook_question_progress_json:
@@ -251,11 +251,11 @@ def process_answer_by_wordbook():
 
 
 if __name__ == "__main__":
-    switch_boom = 1
+    switch_boom = 2
     if switch_boom == 1:
         process_answer_by_wordbook()
     elif switch_boom == 2:
-        process_answer_by_gradewordbook('一', '上', True)
+        process_answer_by_gradewordbook('四', '下', False)
 
 
 

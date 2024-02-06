@@ -99,8 +99,9 @@ def init_database():
     '''
     filepath_list = ['./database/data/wordbook.json']
     # 初始化生词本
-    with open('tmp.json', 'w', encoding='utf-8') as file:
-        json.dump([], file, ensure_ascii=False, indent=2)
+    for filepath in filepath_list:
+        with open(filepath, 'w', encoding='utf-8') as file:
+            json.dump([], file, ensure_ascii=False, indent=2)
     # 初始化所有年级标志
     clear_gradewordbook_questions_bingolabel('六', '下', True)
     # 初始化年级所有题目缓存题数
@@ -136,7 +137,7 @@ def regularize_questions(filename):
 
 
 if __name__ == "__main__":
-    switch_boom = 5
+    switch_boom = 1
     if switch_boom == 1:
         init_database()
     elif switch_boom == 2:

@@ -127,8 +127,10 @@ def paint_question_progress(grade, period):
         if question_progress_info['gradeperiodrank'] == gradeperiodrank_dict[grade + period]:
             for i in range(0, len(question_progress_info['grade_dynamic_right_nums'])):
                 accumulate_right += question_progress_info['grade_dynamic_right_nums'][i]
-                right_progress.append(accumulate_right)
+                stage_right = float(question_progress_info['grade_dynamic_right_nums'][i])
+                stage_picked = float(question_progress_info['grade_dynamic_picked_nums'][i])
                 accumulate_picked += question_progress_info['grade_dynamic_picked_nums'][i]
+                right_progress.append(stage_right / stage_picked)
                 picked_progress.append(accumulate_picked)
             whole_num = question_progress_info['grade_question_nums']
             break
@@ -179,7 +181,7 @@ def pack_pdf_by_gradewordbook(grade, period, hybrid_mode):
         story.append(image)
     else:
         # 纯净模式：绘制当前年级进展图
-        (right_num, whole_num) = paint_question_progress('一', '上')
+        (right_num, whole_num) = paint_question_progress(grade, period)
         story.append(Paragraph(f"近期本年级题目正确率走势如下所示，已攻略{right_num}道，剩余{whole_num - right_num}道", styles['zh']))
         image_path = './resource/figure/question_progress.png'
         image = Image(image_path, width=240, height=150)
@@ -218,7 +220,7 @@ def pack_pdf_by_wordbook():
 
 
 if __name__ == "__main__":
-    switch_boom = 3
+    switch_boom = 4
     if switch_boom == 1:
         paint_wordcloud('gradewordbook') 
     elif switch_boom == 2:
@@ -226,4 +228,4 @@ if __name__ == "__main__":
     elif switch_boom == 3:
         pack_pdf_by_wordbook()
     elif switch_boom == 4:
-        pack_pdf_by_gradewordbook('一', '上', False) 
+        pack_pdf_by_gradewordbook('四', '下', False) 
