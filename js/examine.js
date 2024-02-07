@@ -65,9 +65,19 @@ function fetchQuestions(settingJSON){
         .then(response => response.json())
         .then(data => {
             var questionContainer = document.querySelector('.questions-container');
+            questionContainer.innerHTML = '';
+            if(data['message'] == 'error'){
+                // 说明没有生字，报错即可。
+                var noQuestionTemplate = document.createElement('div');
+                noQuestionTemplate.classList.add('no-question-template');
+                noQuestionTemplate.innerHTML = `
+                <span>您还未添加任何生字，添加生字后再试试吧~</span>
+                `
+                questionContainer.appendChild(noQuestionTemplate);
+                return;
+            }
             var questions = data['questions'];
             question_nums = questions.length;
-            questionContainer.innerHTML = '';
             for(var i = 0; i < questions.length; i++)
             {
                 var question = questions[i];

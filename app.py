@@ -107,7 +107,7 @@ def add_to_wordbook(target_char):
 
 
 @app.route('/compose_allwordbook/')
-def compse_allwordbook():
+def compose_allwordbook():
     '''
     功能：抽取所有的生词汇聚到一起
     '''
@@ -163,6 +163,11 @@ def fetch_questions():
         from python.select_questions import select_questions_by_gradewordbook
         select_questions_by_gradewordbook(cached_grade, cached_period, cached_hybrid_mode)
     else:
+        from python.auxiliary import check_wordbook_empty
+        if check_wordbook_empty() is True:
+            return jsonify({
+                "message": "error"
+            })
         from python.generate_questions import generate_questions_by_wordbook
         from python.select_questions import select_questions_by_wordbook
         generate_questions_by_wordbook(history_mode=False)
